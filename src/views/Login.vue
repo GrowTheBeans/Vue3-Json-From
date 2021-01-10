@@ -10,6 +10,7 @@
           v-model="state.username"
           name="userName"
           label="用户名"
+          label-width="3em"
           required
           placeholder="请输入用户名..."
           :rules="[{ required: true, message: '请填写用户名' }]"
@@ -19,12 +20,14 @@
           type="password"
           name="passWord"
           label="密码"
+          label-width="3em"
           required
           placeholder="请输入密码..."
           :rules="[{ required: true, message: '请填写密码' }]"
         />
-        <div style="margin: 16px;">
-          <van-button round block type="primary" native-type="submit">提交</van-button>
+        <span class="marking"><van-icon name="warning"/>请如实填写问卷信息</span>
+        <div style="margin-top: 16px;">
+          <van-button round block type="primary" native-type="submit">填写调查问卷</van-button>
         </div>
       </van-form>
     </div>
@@ -95,12 +98,24 @@ export default {
     }
 
     main {
-      margin: 30px 0px;
+      margin: 18px 0px;
       line-height: 20px;
       font-size: 14px;
       color: #434343;
       text-indent: 1em;
       letter-spacing: 1.5px;
+    }
+
+    .marking {
+      display: flex;
+      align-items: center;
+      color: #faab0c;
+      margin-top: 10px;
+      font-size: 12px;
+      i {
+        font-size: 16px;
+        margin-right: 4px;
+      }
     }
   }
 }

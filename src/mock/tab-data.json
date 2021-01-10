@@ -1,0 +1,36 @@
+{
+  "code": 200,
+  "msg": "成功",
+  "data": {
+    "items": [
+      {
+        "id": 28182,
+        "title": ".",
+        "desc": "",
+        "image": "http://pic.app.hualongxiang.com/back_admin_FpnyPamRJ_vc4RkwHqLULsJtwuMj.jpg",
+        "advert_id": 28182
+      },
+      {
+        "id": 28190,
+        "title": "长情相伴 唯爱相随——长相伴（庆典版）终身寿险",
+        "desc": "",
+        "image": "http://pic.app.hualongxiang.com/back_admin_FlXxBKNFYreqta1CsaPow8qBLtI1.jpg",
+        "advert_id": 28190
+      },
+      {
+        "id": 28203,
+        "title": "凌家塘疯抢车厘子了！",
+        "desc": "",
+        "image": "http://pic.app.hualongxiang.com/back_admin_FqcwcVpOjzg_Z3t0lmt_0fJXwhXr.png",
+        "advert_id": 28203
+      },
+      {
+        "id": 28204,
+        "title": "忙了半天就做了几个小菜！",
+        "desc": "",
+        "image": "http://pic.app.hualongxiang.com/back_admin_Fq_2GXkNh0JFdXDwmHPHuy-tDrDM.jpg",
+        "advert_id": 28204
+      }
+    ]
+  }
+}
