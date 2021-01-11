@@ -8,50 +8,58 @@
       @click-left="onClickLeft"
       @click-right="onClickRight"
     />
-    <van-swipe
-      class="swiper-carousel"
-      lazy-render
-      loop
-      touchable
-      :height="260"
-      :autoplay="3000"
+    <van-tabs
+      background="#f7f8fa"
+      title-active-color="#1989fa"
+      title-inactive-color="#323233"
     >
-      <van-swipe-item v-for="(images, index) in imagesList" :key="index">
-        <img class="swipe-img" :src="images" />
-      </van-swipe-item>
-    </van-swipe>
-    <div class="home">
-      <van-cell
-        border
-        title="选择单个日期"
-        :value="date"
-        @click="show = true"
-      />
-      <van-calendar v-model:show="show" @confirm="onConfirm" />
-    </div>
+      <van-tab title="标签 1">
+        <div class="home">
+          <van-cell
+            border
+            icon="clock"
+            is-link
+            title="选择日期区间"
+            :value="date"
+            @click="show = true"
+          />
+          <van-calendar
+            type="range"
+            @confirm="onConfirm"
+            v-model:show="show"
+            color="#1989fa"
+          />
+          <div class="survry_containers">
+            <survry />
+          </div>
+        </div>
+      </van-tab>
+      <van-tab title="标签 2">内容 2</van-tab>
+    </van-tabs>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 import {ref} from "vue";
-import {Toast} from 'vant';
+import {Toast} from "vant";
+import survry from "../components/survry"
 import router from "../router/index";
 
 export default {
   name: "Home",
+  components: {
+    survry
+  },
   setup() {
-    const date = ref("vue");
+    const date = ref("");
     const show = ref(false);
 
     const formatDate = date => `${date.getMonth() + 1}/${date.getDate()}`;
     const onConfirm = value => {
+      const [start, end] = value;
       show.value = false;
-      date.value = formatDate(value);
+      date.value = `${formatDate(start)} - ${formatDate(end)}`;
     };
-    const imagesList = [
-      "https://img.yzcdn.cn/vant/apple-1.jpg",
-      "https://img.yzcdn.cn/vant/apple-2.jpg"
-    ];
     const onClickLeft = () => {
       router.push("/login");
     };
@@ -66,7 +74,6 @@ export default {
       date,
       show,
       onConfirm,
-      imagesList,
       onClickLeft,
       onClickRight
     };
@@ -75,11 +82,11 @@ export default {
 </script>
 
 <style scoped lang="less">
-.home {
-}
-
-.swipe-img {
+.survry_containers {
   width: 100%;
-  height: 260px;
+  height: calc(100vh - 134px);
+  overflow: scroll;
+  background: url("../assets/images/success-banner.png") no-repeat;
+  background-size: 100% 100%;
 }
 </style>
