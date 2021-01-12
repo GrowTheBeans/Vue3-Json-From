@@ -1,7 +1,8 @@
 /*日期格式化*/
 export function DateTime(time) {
   let data = new Date();
-  return data
+  let M = data.getDate();
+  // return M +
 }
 
 /*验证手机号*/

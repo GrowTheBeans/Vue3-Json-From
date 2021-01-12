@@ -13,7 +13,7 @@
       title-active-color="#1989fa"
       title-inactive-color="#323233"
     >
-      <van-tab title="标签 1">
+      <van-tab title="填写问卷">
         <div class="home">
           <van-cell
             border
@@ -34,7 +34,7 @@
           </div>
         </div>
       </van-tab>
-      <van-tab title="标签 2">内容 2</van-tab>
+      <van-tab title="个人填报">内容 2</van-tab>
     </van-tabs>
   </div>
 </template>

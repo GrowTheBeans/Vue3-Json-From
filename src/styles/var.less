@@ -1,7 +1,23 @@
 // tab单独测试
 @blue: #1989fa;
+@red: #ee0a24;
+@gray-7: #646566;
 @tabs-default-color: @blue;
 @tabs-bottom-bar-width: 50%;
 @tabs-bottom-bar-height: 2px;
 @tab-font-size: 16px;
 @cell-right-icon-color: @blue;
+@field-label-color: @blue;
+@field-input-error-text-color: @gray-7;
+
+.van-cell {
+  &__left-icon {
+    color: @blue;
+  }
+}
+
+.van-field {
+  &__label {
+    font-weight: 700;
+  }
+}
