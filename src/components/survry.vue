@@ -10,7 +10,7 @@
     >
       <van-field
         v-model="state.QuestionInfo.CorpName"
-        name="用户名"
+        name="CorpName"
         label="企业名称"
         required
         placeholder="请输入企业名称"
@@ -18,8 +18,8 @@
       />
       <van-field
         v-model="state.QuestionInfo.CorpCreditCode"
-        type="password"
-        name="密码"
+        type="number"
+        name="CorpCreditCode"
         label="统一社会信用代码"
         required
         placeholder="请输入统一社会信用代码"
