@@ -43,8 +43,8 @@ export default {
   name: "Login",
   setup() {
     const state = reactive({
-      username: "123",
-      password: "123"
+      username: "",
+      password: ""
     })
     const onSubmit = (values) => {
       if ((values.userName === "123") && (values.passWord === "123")) {
