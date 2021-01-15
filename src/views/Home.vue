@@ -34,7 +34,9 @@
           </div>
         </div>
       </van-tab>
-      <van-tab title="个人填报">内容 2</van-tab>
+      <van-tab title="个人填报">
+        <posts />
+      </van-tab>
     </van-tabs>
   </div>
 </template>
@@ -43,12 +45,14 @@
 import {ref} from "vue";
 import {Toast} from "vant";
 import survry from "../components/survry"
+import posts from "../components/posts"
 import router from "../router/index";
 
 export default {
   name: "Home",
   components: {
-    survry
+    survry,
+    posts
   },
   setup() {
     const date = ref("");

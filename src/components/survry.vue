@@ -28,7 +28,6 @@
       <van-field
         v-model="state.QuestionInfo.CorpCreditCode"
         type="password"
-        name="密码"
         label="人力资源部联系人"
         required
         placeholder="请输入人力资源部联系人"
@@ -36,8 +35,8 @@
       />
       <van-field
         v-model="state.QuestionInfo.CorpCreditCode"
-        type="password"
         name="密码"
+        type="tel"
         label="人力资源部联系人手机"
         required
         placeholder="请输入人力资源部联系人手机"
@@ -132,8 +131,8 @@
       <van-field name="radio" required label="现阶段是否缺工">
         <template #input>
           <van-radio-group v-model="checked" direction="horizontal">
-            <van-radio name="1">是</van-radio>
-            <van-radio name="2">否</van-radio>
+            <van-radio name="yes">是</van-radio>
+            <van-radio name="no">否</van-radio>
           </van-radio-group>
         </template>
       </van-field>
@@ -157,7 +156,7 @@ export default {
         CorpCreditCode: ""
       }
     });
-    const checked = ref('1');
+    const checked = ref('yes');
     const onSubmit = (values) => {
       console.log('submit', values);
     }

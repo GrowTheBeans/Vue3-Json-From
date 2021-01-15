@@ -1,5 +1,6 @@
 import {createRouter, createWebHistory} from "vue-router";
 import Home from "../views/Home.vue";
+import Success from "../components/success.vue";
 
 const routes = [
   {
@@ -37,6 +38,11 @@ const routes = [
           import("../views/TabBar/Mine.vue")
       }
     ]
+  },
+  {
+    path: "/success",
+    name: "Success",
+    component: Success
   },
   {
     path: "/login",
