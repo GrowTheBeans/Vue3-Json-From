@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory} from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Success from "../components/success.vue";
 
@@ -19,23 +19,19 @@ const routes = [
     children: [
       {
         path: "",
-        component: () =>
-          import("../views/TabBar/Home.vue")
+        component: () => import("../views/TabBar/Home.vue")
       },
       {
         path: "detail",
-        component: () =>
-          import("../views/TabBar/Detail.vue")
+        component: () => import("../views/TabBar/Detail.vue")
       },
       {
         path: "edit",
-        component: () =>
-          import("../views/TabBar/Edit.vue")
+        component: () => import("../views/TabBar/Edit.vue")
       },
       {
         path: "mine",
-        component: () =>
-          import("../views/TabBar/Mine.vue")
+        component: () => import("../views/TabBar/Mine.vue")
       }
     ]
   },
@@ -47,8 +43,7 @@ const routes = [
   {
     path: "/login",
     name: "Login",
-    component: () =>
-      import(/*webpackChunkName: "login" */ "../views/Login.vue")
+    component: () => import(/*webpackChunkName: "login" */ "../views/Login.vue")
   }
 ];
 
