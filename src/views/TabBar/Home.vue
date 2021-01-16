@@ -1,6 +1,9 @@
 <template>
   <div>
-    首页 {{sup}}
+    <router-link to="/">推荐</router-link>
+    <router-link to="/recommend">歌手</router-link>
+    <router-link to="/singer">排行</router-link>
+    <router-view />
   </div>
 </template>
 

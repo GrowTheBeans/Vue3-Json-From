@@ -1,4 +1,4 @@
-import {createApp} from "vue";
+import { createApp } from "vue";
 import App from "./App.vue";
 // import "./filters";
 // import Vant from "vant";
@@ -24,6 +24,7 @@ import {
   NavBar,
   Tab,
   Tabs,
+  Switch,
   Tabbar,
   TabbarItem
 } from "vant";
@@ -44,6 +45,7 @@ createApp(App)
   .use(Radio)
   .use(Notify)
   .use(NavBar)
+  .use(Switch)
   .use(Tab)
   .use(Tabs)
   .use(Tabbar)

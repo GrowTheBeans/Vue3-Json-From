@@ -1,9 +1,17 @@
 <template>
   <div class="home">
+    <div class="switch">
+      <van-switch
+        v-model="state.checked"
+        size="10px"
+        inactive-color="#0d1117"
+      />
+    </div>
     <h1 class="home_title">Vue3项目测试案例</h1>
     <div class="home_container">
       <div class="title">疫情期间企业用工需求调查问卷</div>
-      <main>为落实市委、市政府关于支持企业共渡难关的政策意见，在确保做好防疫工作的前提下，保障各类企业用工复产，切实掌握我市企业用工需求动态变化情况。现对全市规模以上企业开展用工需求调查，帮助企业尽快复工复产、摆脱疫情影响。
+      <main>
+        为落实市委、市政府关于支持企业共渡难关的政策意见，在确保做好防疫工作的前提下，保障各类企业用工复产，切实掌握我市企业用工需求动态变化情况。现对全市规模以上企业开展用工需求调查，帮助企业尽快复工复产、摆脱疫情影响。
       </main>
       <van-form @submit="onSubmit">
         <van-field
@@ -25,9 +33,13 @@
           placeholder="请输入密码..."
           :rules="[{ required: true, message: '请填写密码' }]"
         />
-        <span class="marking"><van-icon name="warning"/>请如实填写问卷信息</span>
+        <span class="marking">
+          <van-icon name="warning" />请如实填写问卷信息
+        </span>
         <div style="margin-top: 16px;">
-          <van-button round block type="primary" native-type="submit">填写调查问卷</van-button>
+          <van-button round block type="primary" native-type="submit">
+            填写调查问卷
+          </van-button>
         </div>
       </van-form>
     </div>
@@ -44,7 +56,8 @@ export default {
   setup() {
     const state = reactive({
       username: "",
-      password: ""
+      password: "",
+      checked: true
     })
     const onSubmit = (values) => {
       if ((values.userName === "123") && (values.passWord === "123")) {
@@ -72,6 +85,11 @@ export default {
   height: 100vh;
   background: url("../assets/images/background.png") no-repeat;
   background-size: 100% 100%;
+  .switch {
+    position: absolute;
+    right: 8px;
+    top: 10px;
+  }
 
   .home_title {
     color: #3a3a3a;

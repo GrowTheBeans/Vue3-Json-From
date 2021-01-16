@@ -18,8 +18,22 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
     children: [
       {
-        path: "",
-        component: () => import("../views/TabBar/Home.vue")
+        path: "ranking",
+        component: () => import("../views/TabBar/Home.vue"),
+        children: [
+          {
+            path: "/",
+            component: () => import("../views/TabBar/common/ranking.vue")
+          },
+          {
+            path: "/recommend",
+            component: () => import("../views/TabBar/common/recommend.vue")
+          },
+          {
+            path: "/singer",
+            component: () => import("../views/TabBar/common/singer.vue")
+          }
+        ]
       },
       {
         path: "detail",
