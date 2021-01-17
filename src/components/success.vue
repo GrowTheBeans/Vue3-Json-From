@@ -107,15 +107,16 @@ export default {
         border: 1px solid #0e99ff;
         background-color: #fff;
         margin-left: 22px;
-        box-shadow: 0px 2px 12px 0px rgba(14, 152, 254, 0.37);
+        box-shadow: 0 2px 12px 0 rgba(14, 152, 254, 0.37);
       }
     }
 
     .success_cue {
-      margin: 82px auto;
+      margin: 40px auto;
       padding: 15px 18px;
       width: 323px;
       height: 223px;
+      box-sizing: content-box;
       background: #fffbe6;
       border: 1px solid #ffe58f;
       border-radius: 4px;

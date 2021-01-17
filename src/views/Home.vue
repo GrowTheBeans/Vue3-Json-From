@@ -23,22 +23,24 @@
             :value="date"
             @click="show = true"
           />
+        <!--    点击遮罩层后关闭问题，后续修改      -->
           <van-calendar
             type="range"
             @confirm="onConfirm"
             :show="show"
-            poppable
+            :poppable="true"
+            :close-on-click-overlay=false
             show-mark
             :show-confirm="false"
             color="#1989fa"
           />
           <div class="survry_containers">
-            <survry />
+            <survry/>
           </div>
         </div>
       </van-tab>
       <van-tab title="个人填报">
-        <posts />
+        <posts/>
       </van-tab>
     </van-tabs>
   </div>
