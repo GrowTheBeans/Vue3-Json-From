@@ -6,7 +6,7 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
   },
   {
     path: "/about",
@@ -23,47 +23,48 @@ const routes = [
         children: [
           {
             path: "/",
-            component: () => import("../views/TabBar/common/ranking.vue")
+            component: () => import("../views/TabBar/common/ranking.vue"),
           },
           {
             path: "/recommend",
-            component: () => import("../views/TabBar/common/recommend.vue")
+            component: () => import("../views/TabBar/common/recommend.vue"),
           },
           {
             path: "/singer",
-            component: () => import("../views/TabBar/common/singer.vue")
-          }
-        ]
+            component: () => import("../views/TabBar/common/singer.vue"),
+          },
+        ],
       },
       {
         path: "detail",
-        component: () => import("../views/TabBar/Detail.vue")
+        component: () => import("../views/TabBar/Detail.vue"),
       },
       {
         path: "edit",
-        component: () => import("../views/TabBar/Edit.vue")
+        component: () => import("../views/TabBar/Edit.vue"),
       },
       {
         path: "mine",
-        component: () => import("../views/TabBar/Mine.vue")
-      }
-    ]
+        component: () => import("../views/TabBar/Mine.vue"),
+      },
+    ],
   },
   {
     path: "/success",
     name: "Success",
-    component: Success
+    component: Success,
   },
   {
     path: "/login",
     name: "Login",
-    component: () => import(/*webpackChunkName: "login" */ "../views/Login.vue")
-  }
+    component: () =>
+      import(/*webpackChunkName: "login" */ "../views/Login.vue"),
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 });
 
 export default router;

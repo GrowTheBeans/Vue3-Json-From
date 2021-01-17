@@ -36,7 +36,7 @@
         <span class="marking">
           <van-icon name="warning" />请如实填写问卷信息
         </span>
-        <div style="margin-top: 16px;">
+        <div style="margin-top: 16px">
           <van-button round block type="primary" native-type="submit">
             填写调查问卷
           </van-button>
@@ -63,7 +63,7 @@ export default {
       if ((values.userName === "123") && (values.passWord === "123")) {
         router.push('/')
       } else {
-        Notify({type: 'warning', message: "请重新输入用户名和密码"})
+        Notify({type: 'warning', message: "输入用户名和密码错误!!!"})
       }
       return null
     }

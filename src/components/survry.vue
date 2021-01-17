@@ -136,7 +136,7 @@
           </van-radio-group>
         </template>
       </van-field>
-      <div style="margin: 16px;">
+      <div style="margin: 16px">
         <van-button plain round block type="primary" native-type="submit">
           <text style="font-size: 16px">提&nbsp;&nbsp;&nbsp;交</text>
         </van-button>

@@ -26,7 +26,7 @@ import {
   Tabs,
   Switch,
   Tabbar,
-  TabbarItem
+  TabbarItem,
 } from "vant";
 
 createApp(App)
