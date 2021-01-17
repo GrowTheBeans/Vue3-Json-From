@@ -14,40 +14,39 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
-    children: [
-      {
-        path: "ranking",
-        component: () => import("../views/TabBar/Home.vue"),
-        children: [
-          {
-            path: "/",
-            component: () => import("../views/TabBar/common/ranking.vue"),
-          },
-          {
-            path: "/recommend",
-            component: () => import("../views/TabBar/common/recommend.vue"),
-          },
-          {
-            path: "/singer",
-            component: () => import("../views/TabBar/common/singer.vue"),
-          },
-        ],
-      },
-      {
-        path: "detail",
-        component: () => import("../views/TabBar/Detail.vue"),
-      },
-      {
-        path: "edit",
-        component: () => import("../views/TabBar/Edit.vue"),
-      },
-      {
-        path: "mine",
-        component: () => import("../views/TabBar/Mine.vue"),
-      },
-    ],
+    component: () => import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    // children: [
+    //   {
+    //     // path: "ranking",
+    //     // component: () => import("../views/TabBar/Home.vue"),
+    //     children: [
+    //       // {
+    //       //   path: "/",
+    //       //   component: () => import("../views/TabBar/common/ranking.vue"),
+    //       // },
+    //       {
+    //         path: "/recommend",
+    //         component: () => import("../views/TabBar/common/recommend.vue"),
+    //       },
+    //       {
+    //         path: "/singer",
+    //         component: () => import("../views/TabBar/common/singer.vue"),
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     path: "detail",
+    //     component: () => import("../views/TabBar/Detail.vue"),
+    //   },
+    //   {
+    //     path: "edit",
+    //     component: () => import("../views/TabBar/Edit.vue"),
+    //   },
+    //   {
+    //     path: "mine",
+    //     component: () => import("../views/TabBar/Mine.vue"),
+    //   },
+    // ],
   },
   {
     path: "/success",
