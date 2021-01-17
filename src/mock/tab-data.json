@@ -31,6 +31,89 @@
         "image": "http://pic.app.hualongxiang.com/back_admin_Fq_2GXkNh0JFdXDwmHPHuy-tDrDM.jpg",
         "advert_id": 28204
       }
+    ],
+    "swipeMock": [
+      {
+        "id": 0,
+        "picUrl": "http://p1.music.126.net/L2vC5tVzEGVehAtcjpZ1FQ==/109951165605310291.jpg"
+      },
+      {
+        "id": 1,
+        "picUrl": "http://p1.music.126.net/8vLSxjkhuwpgDPErxyVt4w==/109951165609474509.jpg"
+      },
+      {
+        "id": 2,
+        "picUrl": "http://p1.music.126.net/7UVgN1NEDtfd104peW_cEQ==/109951165635162748.jpg"
+      },
+      {
+        "id": 3,
+        "picUrl": "http://p1.music.126.net/BBo-j7fdx7unBUpkI6SAQA==/109951165635141446.jpg"
+      }
+    ],
+    "listMock": [
+      {
+        "id": 5344775532,
+        "type": 0,
+        "name": "复古系|光怪陆离的幻想之旅",
+        "copywriter": "编辑推荐：簇拥着的斑斓色彩↵些许蒙上了年代感的色泽",
+        "picUrl": "https://p2.music.126.net/NoURvJXsYoXrl1HqSoNy3Q==/109951165485850861.jpg"
+      },
+      {
+        "id": 5445073692,
+        "type": 0,
+        "name": "醉听曲中事，何妨忆前尘",
+        "copywriter": "编辑推荐： 一曲新词酒一杯，去年天气旧亭台",
+        "picUrl": "https://p2.music.126.net/G-qDlNXkDzutU-aqaKeAfg==/109951165606205375.jpg"
+      },
+      {
+        "id": 2857550594,
+        "type": 0,
+        "name": "精选｜评论10w+单曲循环歌曲",
+        "copywriter": "热门推荐",
+        "picUrl": "https://p2.music.126.net/UuKmzOfFymLTGW77VTAFMw==/109951164170448016.jpg"
+      },
+      {
+        "id": 5312159651,
+        "type": 0,
+        "name": "请 用 动 物 的 本 能 缠 绕 住 我",
+        "copywriter": "热门推荐",
+        "picUrl": "https://p2.music.126.net/5udP0vh4pSTVYTDVOWU7HA==/109951165426321817.jpg"
+      },
+      {
+        "id": 3124642208,
+        "type": 0,
+        "name": "网易云评论最多的粤语歌TOP50",
+        "copywriter": "热门推荐",
+        "picUrl": "https://p2.music.126.net/-6osWky_WObfAydYYiTvpA==/3236962232773608.jpg"
+      },
+      {
+        "id": 3228441619,
+        "type": 0,
+        "name": "『那些心动的弹唱』钢琴and吉他",
+        "copywriter": "热门推荐",
+        "picUrl": "https://p2.music.126.net/ShJ7Kgh0lvGAUE83LTKzQg==/109951165121506557.jpg"
+      },
+      {
+        "id": 4932781493,
+        "type": 0,
+        "name": "“人多 太吵 我突然就不想笑了.”",
+        "copywriter": "热门推荐",
+        "picUrl": "https://p2.music.126.net/0MzdxTmiY0tO4SR4dp6WvA==/109951164845157020.jpg"
+      },
+      {
+        "id": 2557744972,
+        "type": 0,
+        "name": "先上DJ先上DJ【土到极致就是嗨】",
+        "copywriter": "热门推荐",
+        "picUrl": "https://p2.music.126.net/AzQ5PYt2VYAIUM-506fHoQ==/109951165502267501.jpg"
+      },
+      {
+        "id": 5344775532,
+        "type": 0,
+        "name": "复古系|光怪陆离的幻想之旅",
+        "copywriter": "编辑推荐：簇拥着的斑斓色彩↵些许蒙上了年代感的色泽",
+        "picUrl": "https://p2.music.126.net/NoURvJXsYoXrl1HqSoNy3Q==/109951165485850861.jpg"
+      }
     ]
   }
 }
