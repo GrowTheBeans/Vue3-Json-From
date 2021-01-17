@@ -26,7 +26,7 @@
           <van-calendar
             type="range"
             @confirm="onConfirm"
-            v-model:show="show"
+            :show="show"
             color="#1989fa"
           />
           <div class="survry_containers">
