@@ -28,5 +28,8 @@ module.exports = {
 };
 ```
 
-> 控制主题色
+> 自定义控件
+ 
+- 弹出层 使用 `van-popup` 与 `van-picker` **选择器** 结合
 
+> 控制主题色

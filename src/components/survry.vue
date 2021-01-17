@@ -1,4 +1,5 @@
 <template>
+  <!-- 验证后续加入 -->
   <div class="survry">
     <h3 class="banner_title">企业用工需求调查问卷</h3>
     <van-form
@@ -26,108 +27,109 @@
         :rules="[{ required: true, message: '请填写统一社会信用代码' }]"
       />
       <van-field
-        v-model="state.QuestionInfo.CorpCreditCode"
-        type="password"
+        v-model="state.QuestionInfo.HRContact"
         label="人力资源部联系人"
+        name="HRContact"
         required
         placeholder="请输入人力资源部联系人"
         :rules="[{ required: true, message: '请填写人力资源部联系人' }]"
       />
       <van-field
-        v-model="state.QuestionInfo.CorpCreditCode"
-        name="密码"
+        v-model="state.QuestionInfo.HRContactTel"
         type="tel"
+        name="HRContactTel"
+        maxlength="11"
         label="人力资源部联系人手机"
         required
         placeholder="请输入人力资源部联系人手机"
         :rules="[{ required: true, message: '请填写人力资源部联系人手机' }]"
       />
       <van-field
-        v-model="state.QuestionInfo.CorpCreditCode"
-        type="password"
-        name="密码"
+        v-model="state.QuestionInfo.RecruitTel"
+        type="tel"
+        name="RecruitTel"
         label="对外招聘电话"
         required
         placeholder="请输入对外招聘电话"
         :rules="[{ required: true, message: '请填写对外招聘电话' }]"
       />
       <van-field
-        v-model="state.QuestionInfo.CorpCreditCode"
-        type="password"
-        name="密码"
+        v-model="state.QuestionInfo.RecruitEmail"
+        type="email"
+        name="RecruitEmail"
         label="对外招聘邮箱"
         required
         placeholder="请输入对外招聘邮箱"
         :rules="[{ required: true, message: '请填写对外招聘邮箱' }]"
       />
-      <van-field
-        v-model="state.QuestionInfo.CorpCreditCode"
-        type="password"
-        name="密码"
-        label="企业所属镇(区)"
-        is-link
-        required
-        placeholder="请输入企业所属镇(区)"
-        :rules="[{ required: true, message: '请填写企业所属镇(区)' }]"
-      />
-      <van-field
-        v-model="state.QuestionInfo.CorpCreditCode"
-        type="password"
-        name="密码"
-        label="企业所属行业"
-        is-link
-        required
-        placeholder="请输入企业所属行业"
-        :rules="[{ required: true, message: '请填写企业所属行业' }]"
-      />
-      <van-field
-        v-model="state.QuestionInfo.CorpCreditCode"
-        type="password"
-        name="密码"
-        label="企业登记注册类型"
-        is-link
-        required
-        placeholder="请输入企业登记注册类型"
-        :rules="[{ required: true, message: '请填写企业登记注册类型' }]"
-      />
-      <van-field
-        v-model="state.QuestionInfo.CorpCreditCode"
-        type="password"
-        name="密码"
-        label="企业目前员工人数"
-        is-link
-        required
-        placeholder="请输入企业目前员工人数"
-        :rules="[{ required: true, message: '请填写企业目前员工人数' }]"
-      />
-      <van-field
-        v-model="state.QuestionInfo.CorpCreditCode"
-        type="password"
-        name="密码"
-        label="其中外地员工人数"
-        required
-        placeholder="请输入其中外地员工人数"
-        :rules="[{ required: true, message: '请填写其中外地员工人数' }]"
-      />
-      <van-field
-        v-model="state.QuestionInfo.CorpCreditCode"
-        type="password"
-        name="密码"
-        label="其中女性员工人数"
-        required
-        placeholder="请输入其中女性员工人数"
-        :rules="[{ required: true, message: '请填写其中女性员工人数' }]"
-      />
-      <van-field
-        v-model="state.QuestionInfo.CorpCreditCode"
-        type="password"
-        name="密码"
-        label="企业何时复工"
-        is-link
-        required
-        placeholder="请输入企业何时复工时间"
-        :rules="[{ required: true, message: '请填写企业何时复工时间' }]"
-      />
+<!--      <van-field-->
+<!--        v-model="state.QuestionInfo.CorpCreditCode"-->
+<!--        type="password"-->
+<!--        name="密码"-->
+<!--        label="企业所属镇(区)"-->
+<!--        is-link-->
+<!--        required-->
+<!--        placeholder="请输入企业所属镇(区)"-->
+<!--        :rules="[{ required: true, message: '请填写企业所属镇(区)' }]"-->
+<!--      />-->
+<!--      <van-field-->
+<!--        v-model="state.QuestionInfo.CorpCreditCode"-->
+<!--        type="password"-->
+<!--        name="密码"-->
+<!--        label="企业所属行业"-->
+<!--        is-link-->
+<!--        required-->
+<!--        placeholder="请输入企业所属行业"-->
+<!--        :rules="[{ required: true, message: '请填写企业所属行业' }]"-->
+<!--      />-->
+<!--      <van-field-->
+<!--        v-model="state.QuestionInfo.CorpCreditCode"-->
+<!--        type="password"-->
+<!--        name="密码"-->
+<!--        label="企业登记注册类型"-->
+<!--        is-link-->
+<!--        required-->
+<!--        placeholder="请输入企业登记注册类型"-->
+<!--        :rules="[{ required: true, message: '请填写企业登记注册类型' }]"-->
+<!--      />-->
+<!--      <van-field-->
+<!--        v-model="state.QuestionInfo.CorpCreditCode"-->
+<!--        type="password"-->
+<!--        name="密码"-->
+<!--        label="企业目前员工人数"-->
+<!--        is-link-->
+<!--        required-->
+<!--        placeholder="请输入企业目前员工人数"-->
+<!--        :rules="[{ required: true, message: '请填写企业目前员工人数' }]"-->
+<!--      />-->
+<!--      <van-field-->
+<!--        v-model="state.QuestionInfo.CorpCreditCode"-->
+<!--        type="password"-->
+<!--        name="密码"-->
+<!--        label="其中外地员工人数"-->
+<!--        required-->
+<!--        placeholder="请输入其中外地员工人数"-->
+<!--        :rules="[{ required: true, message: '请填写其中外地员工人数' }]"-->
+<!--      />-->
+<!--      <van-field-->
+<!--        v-model="state.QuestionInfo.CorpCreditCode"-->
+<!--        type="password"-->
+<!--        name="密码"-->
+<!--        label="其中女性员工人数"-->
+<!--        required-->
+<!--        placeholder="请输入其中女性员工人数"-->
+<!--        :rules="[{ required: true, message: '请填写其中女性员工人数' }]"-->
+<!--      />-->
+<!--      <van-field-->
+<!--        v-model="state.QuestionInfo.CorpCreditCode"-->
+<!--        type="password"-->
+<!--        name="密码"-->
+<!--        label="企业何时复工"-->
+<!--        is-link-->
+<!--        required-->
+<!--        placeholder="请输入企业何时复工时间"-->
+<!--        :rules="[{ required: true, message: '请填写企业何时复工时间' }]"-->
+<!--      />-->
       <van-field name="radio" required label="现阶段是否缺工">
         <template #input>
           <van-radio-group v-model="checked" direction="horizontal">
@@ -153,7 +155,9 @@ export default {
     const state = reactive({
       QuestionInfo: {
         CorpName: "",
-        CorpCreditCode: ""
+        CorpCreditCode: "",
+        HRContact: "",
+        HRContactTel: ""
       }
     });
     const checked = ref('yes');
