@@ -2,7 +2,7 @@
   <div class="about">
     <van-tabbar v-model="active" active-color="#ee0a24" inactive-color="#000">
       <van-tabbar-item icon="home-o">
-        <router-link to="/about">首页</router-link>
+        <router-link to="/about/home">首页</router-link>
       </van-tabbar-item>
       <van-tabbar-item icon="search">
         <router-link to="/about/detail">详情页面</router-link>

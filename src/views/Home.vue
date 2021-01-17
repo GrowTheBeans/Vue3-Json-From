@@ -73,7 +73,7 @@ export default {
       router.push("/login");
     };
     const onClickRight = () => {
-      router.push("/about")
+      router.push("/about/home/recommend")
       Toast.loading({
         message: "请求加载...",
         forbidClick: true
