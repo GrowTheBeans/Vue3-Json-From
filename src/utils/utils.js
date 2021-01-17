@@ -3,18 +3,12 @@ export function DateTime(date) {
   if (!date) {
     return null;
   }
-  let data = new Date(date);
-  let Y = data.getFullYear(); // 年
-  let M = data.getMinutes() + 1; // 月
-  let D = data.getDate(); // 日
-  let h = data.getHours(); // 时
-  let m = data.getMinutes(); // 分
-  let s = data.getSeconds(); // 秒
-  let MM = M < 10 ? "0" + M : M;
-  let DD = D < 10 ? "0" + D : D;
-  let mm = m < 10 ? "0" + m : m;
-  let ss = s < 10 ? "0" + s : s;
-  return `${Y}-${MM}-${DD} ${h}:${mm}:${ss}`;
+  let dataTime = new Date(date);
+  let m = dataTime.getMonth() + 1;
+  let d = dataTime.getDate()
+  let M = m < 10 ? '0' + m : m;
+  let D = d < 10 ? '0' + d : d;
+  return `${M}月-${D}日`;
 }
 
 /*验证手机号*/

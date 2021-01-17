@@ -27,6 +27,9 @@
             type="range"
             @confirm="onConfirm"
             :show="show"
+            poppable
+            show-mark
+            :show-confirm="false"
             color="#1989fa"
           />
           <div class="survry_containers">
@@ -47,6 +50,7 @@ import {Toast} from "vant";
 import survry from "../components/survry"
 import posts from "../components/posts"
 import router from "../router/index";
+import {DateTime} from "../utils/utils.js";
 
 export default {
   name: "Home",
@@ -55,10 +59,9 @@ export default {
     posts
   },
   setup() {
-    const date = ref("");
+    const date = ref(DateTime(new Date()));
     const show = ref(false);
-
-    const formatDate = date => `${date.getMonth() + 1}/${date.getDate()}`;
+    let formatDate = date => DateTime(date)
     const onConfirm = value => {
       const [start, end] = value;
       show.value = false;
