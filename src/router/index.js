@@ -24,23 +24,41 @@ const routes = [
           {
             path: "recommend",
             name: "recommend",
-            component: () => import("../views/TabBar/common/recommend.vue"),
+            component: () => import("../views/TabBar/Music/recommend.vue"),
           },
           {
             path: "singer",
             name: "singer",
-            component: () => import("../views/TabBar/common/singer.vue"),
+            component: () => import("../views/TabBar/Music/singer.vue"),
           },
           {
             path: "ranking",
             name: "ranking",
-            component: () => import("../views/TabBar/common/ranking.vue"),
+            component: () => import("../views/TabBar/Music/ranking.vue"),
           }
         ],
       },
       {
         path: "detail",
         component: () => import("../views/TabBar/Detail.vue"),
+        redirect: {name: "seller"},
+        children: [
+          {
+            path: "seller",
+            name: "seller",
+            component: () => import("../views/TabBar/Order/seller.vue"),
+          },
+          {
+            path: "goods",
+            name: "goods",
+            component: () => import("../views/TabBar/Order/goods.vue"),
+          },
+          {
+            path: "ratings",
+            name: "ratings",
+            component: () => import("../views/TabBar/Order/ratings.vue"),
+          }
+        ],
       },
       {
         path: "edit",
