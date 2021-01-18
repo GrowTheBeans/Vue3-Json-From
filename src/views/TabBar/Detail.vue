@@ -14,7 +14,7 @@
         <router-link to="/about/detail/ratings">商家</router-link>
       </div>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
