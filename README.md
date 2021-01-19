@@ -1,6 +1,20 @@
 #### Vue3 `CompositionAPI`知识点
 
->
+> 1: `Setup`函数
+
+> 2: `ref`
+
+> 3: `reactive`
+
+> 4: `toRef`
+
+> 5: `context`
+
+> 6: `watch`和`watchEffect`区别
+
+> 7: `CompositionAPI` 生命周期
+
+> 8：依赖注入 `Provide` 和 `Inject`
 
 #### 项目包含技术知识点
 

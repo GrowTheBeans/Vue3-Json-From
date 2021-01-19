@@ -1,8 +1,8 @@
 <template>
   <div class="detail">
-    <!--    <div class="detail_head">-->
-    <!--      <img src="" alt="logo"/>-->
-    <!--    </div>-->
+       <div class="detail_head">
+         <img width="64" height="64" :src="Seller.avatar" alt="logo"/>
+       </div>
     <div class="detail_container">
       <div class="detail_item">
         <router-link to="/about/detail/seller">商品</router-link>
@@ -19,8 +19,20 @@
 </template>
 
 <script type="text/ecmascript-6">
+import axios from 'axios';
 export default {
   name: "Detail",
+  data() {
+    return {
+      Seller: {}
+    }
+  },
+  created() {
+    axios('/order/seller').then(res => {
+      const seller = res.data.data
+      this.Seller = seller
+    })
+  }
 };
 </script>
 
