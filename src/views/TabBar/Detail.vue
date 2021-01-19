@@ -30,11 +30,15 @@ export default {
     };
   },
   methods: {
-    sellerList() {
-      axios("/order/seller").then((res) => {
-        const seller = res.data.data;
-        this.Seller = seller;
-      });
+    async sellerList() {
+      try {
+        await axios("/order/seller").then((res) => {
+          const seller = res.data.data;
+          this.Seller = seller;
+        });
+      }catch (e) {
+        // TODO
+      }
     },
   },
   mounted() {
