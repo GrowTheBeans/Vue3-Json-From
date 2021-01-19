@@ -1,8 +1,6 @@
 <template>
   <div class="detail">
-       <div class="detail_head">
-         <img width="64" height="64" :src="Seller.avatar" alt="logo"/>
-       </div>
+    <order-header :seller="Seller"/>
     <div class="detail_container">
       <div class="detail_item">
         <router-link to="/about/detail/seller">商品</router-link>
@@ -19,20 +17,29 @@
 </template>
 
 <script type="text/ecmascript-6">
-import axios from 'axios';
+import OrderHeader from "./Order/components/OrderHeader";
+import axios from "axios";
 export default {
   name: "Detail",
+  components: {
+    "order-header": OrderHeader
+  },
   data() {
     return {
-      Seller: {}
-    }
+      Seller: {},
+    };
+  },
+  methods: {
+    sellerList() {
+      axios("/order/seller").then((res) => {
+        const seller = res.data.data;
+        this.Seller = seller;
+      });
+    },
   },
   created() {
-    axios('/order/seller').then(res => {
-      const seller = res.data.data
-      this.Seller = seller
-    })
-  }
+    this.sellerList()
+  },
 };
 </script>
 
