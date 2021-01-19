@@ -33,6 +33,7 @@ export default {
 </script>
 
 <style scoped lang="less">
+@import "../styles/mixin.less";
 .success {
   background-color: #f1f3f7;
   position: relative;
@@ -40,7 +41,8 @@ export default {
   .success_img {
     width: 100%;
     height: 138px;
-    background: url("./img/booking_banner@2x.png") no-repeat;
+    .bg-img('img/booking_banner');
+   // background: url("./img/booking_banner@3x.png") no-repeat;
     background-size: 100% 100%;
 
     .van-nav-bar {

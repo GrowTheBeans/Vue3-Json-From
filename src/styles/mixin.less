@@ -7,10 +7,13 @@
   white-space: nowrap;
 }
 
-/*图片2@、3@*/
+/*图片2@、3@ 后续做相应的优化*/
 .bg-img(@url) {
-  background-image:~"url('@{url}@2x.png')";
+  background-image: ~"url('{url}.png')";
+  @media (-webkit-min-device-pixel-ratio: 1),(min-device-pixel-ratio: 1) {
+    background-image: ~"url('@{url}@2x.png')";
+  }
   @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
-    background-image:~"url('@{url}@3x.png')";
+    background-image: ~"url('@{url}@3x.png')";
   }
 }
