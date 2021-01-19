@@ -48,9 +48,12 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import "../../../../styles/mixin.less";
+
 .header_containers {
   position: relative;
   overflow: hidden;
+
   header {
     color: #fff;
     background: rgba(7, 17, 27, 0.5);
@@ -69,7 +72,18 @@ export default {
       .title {
         margin: 2px 0 8px 0;
 
+        .brand {
+          display: inline-block;
+          vertical-align: top;
+          width: 30px;
+          height: 18px;
+          .bg-img('img/brand');
+          background-size: 30px 18px;
+          background-repeat: no-repeat;
+        }
+
         .name {
+          margin-left: 6px;
           font-size: 16px;
           line-height: 18px;
           font-weight: bold;
@@ -123,6 +137,14 @@ export default {
     padding: 0 12px 0 12px;
     color: #fff;
     background: rgba(7, 17, 27, 0.6);
+
+    .bulletin-title {
+      width: 28px;
+      height: 12px;
+      .bg-img('img/bulletin');
+      background-size: 24px 12px;
+      background-repeat: no-repeat;
+    }
 
     .bulletin-text {
       margin: 0 4px;
