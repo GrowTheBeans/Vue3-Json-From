@@ -27,7 +27,7 @@
     <div class="background">
       <img :src="seller.avatar"/>
     </div>
-    <Overlay style="display: block" :Seller="seller"/>
+    <Overlay :style="styleOverlay" :Seller="seller"/>
   </div>
 </template>
 
@@ -43,11 +43,15 @@ export default {
     Overlay
   },
   data() {
-    return {}
+    return {
+      styleOverlay: {
+        display: "none"
+      }
+    }
   },
   methods: {
     showDetail() {
-      console.log(234);
+      this.styleOverlay = {display: "block"}
     }
   }
 }

@@ -12,12 +12,12 @@
 export default {
   name: "Overlay",
   props: {
-    Seller: {}
+    Seller: {},
   },
   data() {
-    return {}
-  }
-}
+    return {};
+  },
+};
 </script>
 
 <style scoped lang="less">
@@ -27,7 +27,7 @@ export default {
   left: 0;
   width: 100%;
   min-height: 100%;
-  background-color: rgba(7, 17, 27, .8);
+  background-color: rgba(7, 17, 27, 0.8);
   filter: blur(10);
 
   .overlay_warapper {

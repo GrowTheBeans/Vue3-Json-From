@@ -4,6 +4,7 @@
       <van-tabbar-item replace to="/about/home" icon="music-o">音乐</van-tabbar-item>
       <van-tabbar-item replace to="/about/detail" icon="shop-o">点餐</van-tabbar-item>
       <van-tabbar-item replace to="/about/edit" icon="chat-o">聊天</van-tabbar-item>
+      <van-tabbar-item replace to="/about/study" icon="records">读书</van-tabbar-item>
       <van-tabbar-item replace to="/about/mine" icon="friends-o">个人中心</van-tabbar-item>
     </van-tabbar>
     <router-view/>

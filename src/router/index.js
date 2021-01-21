@@ -65,6 +65,10 @@ const routes = [
         component: () => import("../views/TabBar/Edit.vue"),
       },
       {
+        path: "study",
+        component: () => import("../views/TabBar/Study.vue")
+      },
+      {
         path: "mine",
         component: () => import("../views/TabBar/Mine.vue"),
       },
