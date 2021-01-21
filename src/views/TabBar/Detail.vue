@@ -1,7 +1,7 @@
 <template>
   <div class="detail">
     <order-header :seller="Seller"/>
-    <div class="detail_container">
+    <div class="detail_container van-hairline--bottom">
       <div class="detail_item">
         <router-link to="/about/detail/seller">商品</router-link>
       </div>
