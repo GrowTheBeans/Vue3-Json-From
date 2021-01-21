@@ -47,3 +47,7 @@ module.exports = {
 - 弹出层 使用 `van-popup` 与 `van-picker` **选择器** 结合
 
 > 控制主题色
+
+> Overlay 遮罩层
+
+-[x] 后续通过组件库 `Vant` 进行迭代使用

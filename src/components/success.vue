@@ -48,12 +48,12 @@ export default {
     .van-nav-bar {
       background-color: transparent;
 
-      /deep/ .van-icon {
+      ::v-deep(.van-icon) {
         color: #ffffff;
         font-size: 20px;
       }
 
-      /deep/ .van-nav-bar__title {
+      ::v-deep(.van-nav-bar__title) {
         color: #ffffff;
       }
     }

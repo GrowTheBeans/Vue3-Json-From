@@ -27,14 +27,20 @@
     <div class="background">
       <img :src="seller.avatar"/>
     </div>
+    <Overlay style="display: block" :Seller="seller"/>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+import Overlay from "./Overlay";
+
 export default {
   name: "OrderHeader",
   props: {
     seller: Object
+  },
+  components: {
+    Overlay
   },
   data() {
     return {}
