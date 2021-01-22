@@ -1,24 +1,19 @@
-# web-zhihu
+#### 搭建**知乎**案例项目
 
-## Project setup
-```
-npm install
-```
+> 目录结构规则
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- `components`编写组件
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- `hooks`自定义函数
 
-### Lints and fixes files
-```
-npm run lint
-```
+> 命名规范
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- 
+
+> 首页
+
+- [x] **数据结构设计** 利用 `interface`接口定义
+
+- 
+
+
