@@ -1,30 +1,36 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  <ColumnList :list='list'/>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<script lang='ts'>
+import { defineComponent } from 'vue'
+import ColumnList, { ColumnProps } from './components/ColumnList.vue'
+const testData: ColumnProps[] = [
+  {
+    id: 1,
+    title: 'test1的专栏',
+    description: '这是tes1专栏，有一段非常有意思的见解',
+    avatar: ''
+  },
+  {
+    id: 2,
+    title: 'test2的专栏',
+    description: '这是tes2专栏，有一段非常有意思的见解',
+    avatar: ''
+  }
+]
+export default defineComponent({
+  name: 'App',
+  components: {
+    ColumnList
+  },
+  setup () {
+    return {
+      list: testData
     }
   }
-}
+})
+</script>
+
+<style lang="less">
 </style>
