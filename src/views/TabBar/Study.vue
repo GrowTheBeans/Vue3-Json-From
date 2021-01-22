@@ -90,9 +90,10 @@ export default {
 
       h3 {
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 700;
         margin-bottom: 50px;
-        font-family: "Times New Roman", Times, serif;
+        color: #121212;
+        font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
       }
 
       .icon_study_click {

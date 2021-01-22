@@ -51,6 +51,7 @@ export default {
 .detail_container {
   display: flex;
   flex-direction: row;
+  z-index: -1;
   width: 100%;
   height: 40px;
   line-height: 40px;

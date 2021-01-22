@@ -25,6 +25,7 @@ import {
   Tabs,
   Switch,
   Tabbar,
+  Divider,
   TabbarItem,
 } from "vant";
 
@@ -48,6 +49,7 @@ createApp(App)
   .use(Tab)
   .use(Tabs)
   .use(Tabbar)
+  .use(Divider)
   .use(TabbarItem)
   .use(RadioGroup)
   .mount("#app");
