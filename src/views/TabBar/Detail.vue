@@ -1,7 +1,7 @@
 <template>
   <div class="detail">
     <order-header :seller="Seller"/>
-    <div class="detail_container van-hairline--bottom">
+    <div class="detail_container">
       <div class="detail_item">
         <router-link to="/about/detail/seller">商品</router-link>
       </div>
@@ -51,7 +51,6 @@ export default {
 .detail_container {
   display: flex;
   flex-direction: row;
-  z-index: -1;
   width: 100%;
   height: 40px;
   line-height: 40px;
