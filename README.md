@@ -1,6 +1,24 @@
-### 代码规范练习
+# web-zhihu
 
-> `eslint` 代码检测规则
+## Project setup
+```
+npm install
+```
 
-- 自带 `eslint` 使用 `eslint --init`进行初始化
-- 勾选配置选项进行设置，且最后安装响应的依赖文件
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
