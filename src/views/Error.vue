@@ -1,13 +1,13 @@
 <template>
-  <router-view />
+  404页面
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'App'
+  name: 'Error'
 })
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 </style>

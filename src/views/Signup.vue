@@ -1,13 +1,12 @@
 <template>
-  <router-view />
+  <div class="signup">
+    注册页面
+  </div>
 </template>
 
 <script lang='ts'>
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'App'
+  name: 'Signup'
 })
 </script>
-
-<style lang="less">
-</style>

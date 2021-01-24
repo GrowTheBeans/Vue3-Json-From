@@ -63,7 +63,7 @@ export default defineComponent({
   }
   h5 {
     margin: 20px 0;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
   }
   p {

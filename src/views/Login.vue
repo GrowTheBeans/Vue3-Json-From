@@ -1,13 +1,12 @@
 <template>
-  <router-view />
+  <div class="login">
+    登录页面
+  </div>
 </template>
 
 <script lang='ts'>
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'App'
+  name: 'Login'
 })
 </script>
-
-<style lang="less">
-</style>

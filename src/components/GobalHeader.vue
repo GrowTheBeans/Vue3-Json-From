@@ -8,8 +8,8 @@
         <div class="grid-content"></div>
       </el-col>
       <el-col :span="4">
-        <el-button size="small" plain>登录</el-button>
-        <el-button size="small" type="primary" plain>注册</el-button>
+        <el-button size="small" plain @click="onLogin">登录</el-button>
+        <el-button size="small" type="primary" plain @click="onSignup">注册</el-button>
         <!-- <el-dropdown> -->
           <!-- <span class="el-dropdown-link"> -->
             <!-- 粽子 -->
@@ -39,9 +39,23 @@
 
 <script lang='ts'>
 import { defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
 export default defineComponent({
   name: 'GobalHeader',
-  props: {}
+  props: {},
+  setup () {
+    const router = useRouter()
+    const onLogin = () => {
+      router.push('/login')
+    }
+    const onSignup = () => {
+      router.push('/signup')
+    }
+    return {
+      onLogin,
+      onSignup
+    }
+  }
 })
 </script>
 
