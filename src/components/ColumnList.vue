@@ -7,8 +7,15 @@
             <el-tag type="warning" size="mini" effect="plain">主题</el-tag>
             <span>Card name</span>
             <el-button class="header_title" type="text">
-              <el-link :underline="false" type="primary">Operation button</el-link>
-              <el-tooltip class="item" effect="dark" content="Bottom Center 提示文字" placement="bottom">
+              <el-link :underline="false" type="primary"
+                >Operation button</el-link
+              >
+              <el-tooltip
+                class="item"
+                effect="dark"
+                content="Bottom Center 提示文字"
+                placement="bottom"
+              >
                 <i class="el-icon-warning-outline el-icon--right"></i>
               </el-tooltip>
             </el-button>
@@ -58,17 +65,19 @@ export default defineComponent({
     height: 60px;
     border: 4px solid #fff;
     border-radius: 50%;
-    box-shadow: 0 0 0 2px #F2F6FC;
-    background-color: rgba(0, 0, 0, .02);
+    box-shadow: 0 0 0 2px #f2f6fc;
+    background-color: rgba(0, 0, 0, 0.02);
   }
   h5 {
     margin: 20px 0;
     font-size: 22px;
     font-weight: 500;
+    font-family: Helvetica;
   }
   p {
     text-indent: 1.5em;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
+    line-height: 18px;
     font-size: 14px;
     margin-bottom: 30px;
   }
