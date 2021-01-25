@@ -24,7 +24,7 @@
         <div class="column_containers">
           <img :src="column.avatar" :alt="column.title" />
           <h5>{{ column.title }}</h5>
-          <p>{{ column.description }}</p>
+          <p class="ellips">{{ column.description }}</p>
           <el-button plain size="small" type="primary">
             <span>进入专栏</span>
             <i class="el-icon-arrow-right el-icon--right"></i>
@@ -55,6 +55,13 @@ export default defineComponent({
   float: right;
   padding: 3px 0;
 }
+.el-col {
+  margin: 36px 0 0 0;
+}
+:deep(.el-card) {
+  height: 340px;
+  box-sizing: border-box;
+}
 .column_containers {
   display: flex;
   flex-direction: column;
@@ -79,7 +86,11 @@ export default defineComponent({
     letter-spacing: 1.5px;
     line-height: 18px;
     font-size: 14px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+  }
+  .el-button {
+    position: absolute;
+    bottom: 20px;
   }
 }
 </style>
