@@ -13,7 +13,7 @@
         <el-form-item label="活动形式">
           <el-input></el-input>
         </el-form-item>
-        <el-switch />
+        <el-switch active-text="记住密码" />
         <el-form-item size="large">
           <el-button type="primary" size="small">提交</el-button>
         </el-form-item>
