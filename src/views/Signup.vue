@@ -55,9 +55,7 @@ export default defineComponent({
       font-weight: 500;
     }
     .el-form {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      margin: 0 auto;
       width: 500px;
       height: 650px;
       .el-button {
