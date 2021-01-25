@@ -1,5 +1,5 @@
 <template>
-  <div class="signup">
+  <div class="signup_container">
     注册页面
   </div>
 </template>
