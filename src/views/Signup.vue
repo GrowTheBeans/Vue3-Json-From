@@ -4,18 +4,21 @@
     <div class="signup_right">
       <h3>欢迎注册粽子系统</h3>
       <el-form label-position="top">
-        <el-form-item label="名称">
-          <el-input></el-input>
+        <el-form-item label="邮箱地址">
+          <el-input size="medium" placeholder="请输入邮箱地址"></el-input>
         </el-form-item>
-        <el-form-item label="活动区域">
-          <el-input></el-input>
+        <el-form-item label="昵称">
+          <el-input size="medium" placeholder="请输入昵称"></el-input>
         </el-form-item>
-        <el-form-item label="活动形式">
-          <el-input></el-input>
+        <el-form-item label="密码">
+          <el-input size="medium" placeholder="请输入密码"></el-input>
         </el-form-item>
-        <el-switch active-text="记住密码" />
+        <el-form-item label="重复密码">
+          <el-input size="medium" placeholder="请再次输入密码"></el-input>
+        </el-form-item>
+        <el-switch v-model="SwitchValue" active-text="记住密码" />
         <el-form-item size="large">
-          <el-button type="primary" size="small">提交</el-button>
+          <el-button type="primary" size="medium">注册新的用户</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -25,7 +28,13 @@
 <script lang='ts'>
 import { defineComponent } from 'vue'
 export default defineComponent({
-  name: 'Signup'
+  name: 'Signup',
+  setup () {
+    const SwitchValue = true
+    return {
+      SwitchValue
+    }
+  }
 })
 </script>
 
@@ -55,7 +64,7 @@ export default defineComponent({
       font-weight: 500;
     }
     .el-form {
-      margin: 0 auto;
+      margin: 50px auto;
       width: 500px;
       height: 650px;
       .el-button {
