@@ -5,7 +5,15 @@
         <div class="grid-content">LOGO</div>
       </el-col>
       <el-col :span="18">
-        <div class="grid-content"></div>
+        <div class="grid-content">
+          <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
+            <el-menu-item index="1">高考动态</el-menu-item>
+            <el-menu-item index="2">查大学</el-menu-item>
+            <el-menu-item index="3">查专业</el-menu-item>
+            <el-menu-item index="4">段次线</el-menu-item>
+            <el-tag type="success" hit>开始写文章</el-tag>
+          </el-menu>
+        </div>
       </el-col>
       <el-col :span="4">
         <el-button size="small" plain @click="onLogin">登录</el-button>
@@ -45,6 +53,7 @@ export default defineComponent({
   props: {},
   setup () {
     const router = useRouter()
+    const activeIndex = '2'
     const onLogin = () => {
       router.push('/login')
     }
@@ -53,7 +62,8 @@ export default defineComponent({
     }
     return {
       onLogin,
-      onSignup
+      onSignup,
+      activeIndex
     }
   }
 })
@@ -68,6 +78,19 @@ export default defineComponent({
 }
 .el-col {
   text-align: right;
+}
+.el-menu {
+  color: #fff;
+  background-color: #0d6efd;
+}
+.el-menu-item {
+  color: #fff;
+  border: none;
+}
+.el-tag {
+  cursor: pointer;
+  color: #0d6efd;
+  border: none;
 }
 :deep(.tl){
   text-align: center;

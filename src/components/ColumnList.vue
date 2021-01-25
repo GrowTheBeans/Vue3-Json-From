@@ -60,6 +60,7 @@ export default defineComponent({
 }
 :deep(.el-card) {
   height: 340px;
+  border: 1px solid #F2F6FC;
   box-sizing: border-box;
 }
 .column_containers {
