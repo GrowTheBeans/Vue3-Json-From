@@ -5,20 +5,10 @@
       <h3>登录系统</h3>
       <el-form label-width="80px" class="demo-ruleForm" label-position="left">
         <el-form-item label="密码" prop="pass">
-          <el-input
-            prefix-icon="el-icon-user"
-            size="medium"
-            type="password"
-            autocomplete="off"
-          ></el-input>
+          <el-input prefix-icon="el-icon-user" size="medium" type="password" autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item label="确认密码" prop="checkPass">
-          <el-input
-            prefix-icon="el-icon-view"
-            size="medium"
-            type="password"
-            autocomplete="off"
-          ></el-input>
+          <el-input prefix-icon="el-icon-view" size="medium" type="password" autocomplete="off"></el-input>
         </el-form-item>
         <el-form-item class="login_btn">
           <el-button type="primary" size="small">提交</el-button>

@@ -8,12 +8,7 @@
             <span>Card name</span>
             <el-button class="header_title" type="text">
               <el-link :underline="false" type="primary">Operation button</el-link>
-              <el-tooltip
-                class="item"
-                effect="dark"
-                content="Bottom Center 提示文字"
-                placement="bottom"
-              >
+              <el-tooltip class="item" effect="dark" content="Bottom Center 提示文字" placement="bottom">
                 <i class="el-icon-warning-outline el-icon--right"></i>
               </el-tooltip>
             </el-button>

@@ -30,8 +30,7 @@ const testData: ColumnProps[] = [
     id: 3,
     key: 2,
     title: 'test3的专栏',
-    description:
-      '这是tes3专栏，有一段非常有意思的见解这是tes3专栏，有一段非常有意思的见解有一段非常有意思的见解',
+    description: '这是tes3专栏，有一段非常有意思的见解这是tes3专栏，有一段非常有意思的见解有一段非常有意思的见解',
     avatar: require('../assets/logo.png')
   },
   {
