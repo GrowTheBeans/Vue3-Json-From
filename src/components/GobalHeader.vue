@@ -11,7 +11,7 @@
             <el-menu-item index="2">查大学</el-menu-item>
             <el-menu-item index="3">查专业</el-menu-item>
             <el-menu-item index="4">段次线</el-menu-item>
-            <el-tag type="success" hit>开始写文章</el-tag>
+            <el-tag type="success" effect="plain" hit>开始写文章</el-tag>
           </el-menu>
         </div>
       </el-col>
