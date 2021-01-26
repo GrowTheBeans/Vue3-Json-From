@@ -7,9 +7,7 @@
             <el-tag type="warning" size="mini" effect="plain">主题</el-tag>
             <span>Card name</span>
             <el-button class="header_title" type="text">
-              <el-link :underline="false" type="primary"
-                >Operation button</el-link
-              >
+              <el-link :underline="false" type="primary">Operation button</el-link>
               <el-tooltip
                 class="item"
                 effect="dark"
@@ -60,7 +58,7 @@ export default defineComponent({
 }
 :deep(.el-card) {
   height: 340px;
-  border: 1px solid #F2F6FC;
+  border: 1px solid #f2f6fc;
   box-sizing: border-box;
 }
 .column_containers {

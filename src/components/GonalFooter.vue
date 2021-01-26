@@ -5,12 +5,12 @@
   </el-footer>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import Dayjs from 'dayjs'
 import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'GonalFooter',
-  setup () {
+  setup() {
     const now = Dayjs().format('YYYY年MM月DD日 HH:mm:ss  A')
     return {
       now

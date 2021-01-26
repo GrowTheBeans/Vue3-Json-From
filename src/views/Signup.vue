@@ -25,11 +25,11 @@
   </div>
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'Signup',
-  setup () {
+  setup() {
     const SwitchValue = true
     return {
       SwitchValue
@@ -46,14 +46,14 @@ export default defineComponent({
   .signup_left {
     width: 50%;
     height: 100vh;
-    background: url("../components/image/groups@2x.png") no-repeat;
+    background: url('../components/image/groups@2x.png') no-repeat;
   }
   .signup_right {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 50%;
-    background: url("../components/image/BG@2x.png") no-repeat bottom;
+    background: url('../components/image/BG@2x.png') no-repeat bottom;
     background-size: 100%;
     h3 {
       text-align: center;

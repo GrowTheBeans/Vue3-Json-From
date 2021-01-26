@@ -1,10 +1,10 @@
 <template>
-  <GobalHeader/>
-  <ColumnList :list='list'/>
-  <GobalFooter/>
+  <GobalHeader />
+  <ColumnList :list="list" />
+  <GobalFooter />
 </template>
 
-<script lang='ts'>
+<script lang="ts">
 import { defineComponent } from 'vue'
 import ColumnList from '../components/ColumnList.vue'
 import GobalHeader from '../components/GobalHeader.vue'
@@ -22,21 +22,24 @@ const testData: ColumnProps[] = [
     id: 2,
     key: 1,
     title: 'test2的专栏',
-    description: '这是tes2专栏，有一段非常有意思的见解这是tes2专栏，有一段非常有意思的见解这是tes2专栏，有一段非常有意思的见解这是tes2专栏，有一段非常有意思的见解这是tes2专栏，有一段非常有意思的见解',
+    description:
+      '这是tes2专栏，有一段非常有意思的见解这是tes2专栏，有一段非常有意思的见解这是tes2专栏，有一段非常有意思的见解这是tes2专栏，有一段非常有意思的见解这是tes2专栏，有一段非常有意思的见解',
     avatar: require('../assets/logo.png')
   },
   {
     id: 3,
     key: 2,
     title: 'test3的专栏',
-    description: '这是tes3专栏，有一段非常有意思的见解这是tes3专栏，有一段非常有意思的见解有一段非常有意思的见解',
+    description:
+      '这是tes3专栏，有一段非常有意思的见解这是tes3专栏，有一段非常有意思的见解有一段非常有意思的见解',
     avatar: require('../assets/logo.png')
   },
   {
     id: 4,
     key: 3,
     title: 'test4的专栏',
-    description: '这是tes4专栏，有一段非常有意思的见解这是tes4专栏，有一段非常有意思的见解这是tes4专栏，有一段非常有意思的见解这是tes4专栏，有一段非常有意思的见解',
+    description:
+      '这是tes4专栏，有一段非常有意思的见解这是tes4专栏，有一段非常有意思的见解这是tes4专栏，有一段非常有意思的见解这是tes4专栏，有一段非常有意思的见解',
     avatar: require('../assets/logo.png')
   },
   {
@@ -57,7 +60,8 @@ const testData: ColumnProps[] = [
     id: 7,
     key: 3,
     title: 'test7的专栏',
-    description: '这是tes7专栏，有一段非常有意思的见解这是tes7专栏，有一段非常有意思的见解这是tes7专栏，有一段非常有意思的见解这是tes7专栏，有一段非常有意思的见解这是tes7专栏，有一段非常有意思的见解这是tes2专栏，有一段非常有意思的见解这是tes2专栏，有一段非常有意思的见解',
+    description:
+      '这是tes7专栏，有一段非常有意思的见解这是tes7专栏，有一段非常有意思的见解这是tes7专栏，有一段非常有意思的见解这是tes7专栏，有一段非常有意思的见解这是tes7专栏，有一段非常有意思的见解这是tes2专栏，有一段非常有意思的见解这是tes2专栏，有一段非常有意思的见解',
     avatar: require('../assets/logo.png')
   },
   {
@@ -71,7 +75,8 @@ const testData: ColumnProps[] = [
     id: 9,
     key: 3,
     title: 'test9的专栏',
-    description: '这是tes9专栏，有一段非常有意思的见解这是tes9专栏，有一段非常有意思的见解这是tes999专栏，有一段非常有意思的见解这是tes99999专栏，有一段非常有意思的见解这是tes9999999专栏，有一段非常有意思的见解',
+    description:
+      '这是tes9专栏，有一段非常有意思的见解这是tes9专栏，有一段非常有意思的见解这是tes999专栏，有一段非常有意思的见解这是tes99999专栏，有一段非常有意思的见解这是tes9999999专栏，有一段非常有意思的见解',
     avatar: require('../assets/logo.png')
   },
   {
@@ -96,7 +101,7 @@ export default defineComponent({
     GobalHeader,
     GobalFooter
   },
-  setup () {
+  setup() {
     return {
       list: testData
     }
@@ -104,5 +109,4 @@ export default defineComponent({
 })
 </script>
 
-<style lang="less">
-</style>
+<style lang="less"></style>
