@@ -6,12 +6,12 @@
       </el-col>
       <el-col :span="19">
         <div class="grid-content">
-          <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
-            <el-menu-item index="1">高考动态</el-menu-item>
-            <el-menu-item index="2">查大学</el-menu-item>
-            <el-menu-item index="3">查专业</el-menu-item>
-            <el-menu-item index="4">段次线</el-menu-item>
-            <el-tag type="success" effect="plain" hit>开始写文章</el-tag>
+          <el-menu mode="horizontal" text-color="#fffef9" active-text-color="#11264f">
+            <el-menu-item>高考动态</el-menu-item>
+            <el-menu-item>查大学</el-menu-item>
+            <el-menu-item>查专业</el-menu-item>
+            <el-menu-item>段次线</el-menu-item>
+            <el-tag type="success" hit>开始写文章</el-tag>
           </el-menu>
         </div>
       </el-col>
@@ -53,7 +53,6 @@ export default defineComponent({
   props: {},
   setup() {
     const router = useRouter()
-    const activeIndex = '2'
     const onLogin = () => {
       router.push('/login')
     }
@@ -62,8 +61,7 @@ export default defineComponent({
     }
     return {
       onLogin,
-      onSignup,
-      activeIndex
+      onSignup
     }
   }
 })

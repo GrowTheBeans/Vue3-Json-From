@@ -4,7 +4,7 @@
       <el-card shadow="hover" :body-style="{ padding: '20px' }">
         <template #header>
           <div class="clearfix">
-            <el-tag type="warning" size="mini" effect="plain">主题</el-tag>
+            <el-tag color="#7bbfea" size="mini" effect="dark" hit>主题</el-tag>
             <span>Card name</span>
             <el-button class="header_title" type="text">
               <el-link :underline="false" type="primary">Operation button</el-link>
@@ -36,6 +36,16 @@ export default defineComponent({
   props: {
     list: {
       type: Array as PropType<ColumnProps[]>
+    }
+  },
+  setup(props) {
+    const imgColumnList = props?.list?.filter((column) => {
+      if (!column.avatar) {
+        column.avatar = require('./image/svg/book.svg')
+      }
+    })
+    return {
+      imgColumnList
     }
   }
 })

@@ -1,3 +1,4 @@
+// list列表数据定义
 export interface ColumnProps {
   id: number
   key?: number | string
@@ -7,3 +8,12 @@ export interface ColumnProps {
   excerpt?: string
   description: string
 }
+/**
+ * 登录列表数据定义
+ */
+
+ export interface UserProps {
+  id?: number,
+  name?: string,
+  isLogin: boolean
+ }

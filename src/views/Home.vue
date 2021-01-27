@@ -15,8 +15,7 @@ const testData: ColumnProps[] = [
     id: 1,
     key: 0,
     title: 'test1的专栏',
-    description: '这是tes1专栏，有一段非常有意思的见解',
-    avatar: require('../assets/logo.png')
+    description: '这是tes1专栏，有一段非常有意思的见解'
   },
   {
     id: 2,
