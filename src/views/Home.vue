@@ -29,8 +29,7 @@ const testData: ColumnProps[] = [
     id: 3,
     key: 2,
     title: 'test3的专栏',
-    description: '这是tes3专栏，有一段非常有意思的见解这是tes3专栏，有一段非常有意思的见解有一段非常有意思的见解',
-    avatar: require('../assets/logo.png')
+    description: '这是tes3专栏，有一段非常有意思的见解这是tes3专栏，有一段非常有意思的见解有一段非常有意思的见解'
   },
   {
     id: 4,
@@ -51,8 +50,7 @@ const testData: ColumnProps[] = [
     id: 6,
     key: 3,
     title: 'test6的专栏',
-    description: '这是tes6专栏，有一段非常有意思的见解',
-    avatar: require('../assets/logo.png')
+    description: '这是tes6专栏，有一段非常有意思的见解'
   },
   {
     id: 7,
@@ -81,8 +79,7 @@ const testData: ColumnProps[] = [
     id: 10,
     key: 3,
     title: 'test10的专栏',
-    description: '这是tes10专栏，有一段非常有意思的见解',
-    avatar: require('../assets/logo.png')
+    description: '这是tes10专栏，有一段非常有意思的见解'
   },
   {
     id: 11,

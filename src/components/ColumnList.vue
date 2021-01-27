@@ -29,7 +29,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue'
+import { defineComponent, reactive, PropType } from 'vue'
 import { ColumnProps } from './InterColumn'
 export default defineComponent({
   name: 'ColumnList',
@@ -44,8 +44,10 @@ export default defineComponent({
         column.avatar = require('./image/svg/book.svg')
       }
     })
+    const TagColor = reactive([])
     return {
-      imgColumnList
+      imgColumnList,
+      TagColor
     }
   }
 })

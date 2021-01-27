@@ -16,7 +16,14 @@
         <el-form-item label="重复密码">
           <el-input size="medium" placeholder="请再次输入密码"></el-input>
         </el-form-item>
-        <el-switch v-model="SwitchValue" active-text="记住密码" />
+        <el-row :gutter="20">
+          <el-col :span="12">
+            <el-switch v-model="SwitchValue" active-text="记住密码" />
+          </el-col>
+          <el-col :span="12">
+            <el-link type="primary" :underline="false" @click="onSigLogin">返回登录</el-link>
+          </el-col>
+        </el-row>
         <el-form-item size="large">
           <el-button type="primary" size="medium">注册新的用户</el-button>
         </el-form-item>
@@ -26,13 +33,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
+import { useRouter } from 'vue-router'
 export default defineComponent({
   name: 'Signup',
   setup() {
-    const SwitchValue = true
+    const router = useRouter()
+    const SwitchValue = ref(true)
+    const onSigLogin = () => {
+      router.push('/login')
+    }
     return {
-      SwitchValue
+      SwitchValue,
+      onSigLogin
     }
   }
 })
@@ -71,6 +84,9 @@ export default defineComponent({
         margin-top: 20px;
         width: 100%;
       }
+    }
+    :deep(.el-link) {
+      float: right;
     }
   }
 }

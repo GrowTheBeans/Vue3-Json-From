@@ -5,24 +5,47 @@
       <h3>登录系统</h3>
       <el-form label-width="60px" class="demo-ruleForm" label-position="left">
         <el-form-item label="账号" prop="pass">
-          <el-input prefix-icon="el-icon-user" size="medium" type="text" placeholder="请输入账号" autocomplete="off"></el-input>
+          <el-input
+            prefix-icon="el-icon-user"
+            size="medium"
+            type="text"
+            placeholder="请输入账号"
+            autocomplete="off"
+          ></el-input>
         </el-form-item>
         <el-form-item label="密码" prop="checkPass">
-          <el-input prefix-icon="el-icon-view" size="medium" type="password" placeholder="请输入密码" autocomplete="off"></el-input>
+          <el-input
+            prefix-icon="el-icon-view"
+            size="medium"
+            type="password"
+            placeholder="请输入密码"
+            autocomplete="off"
+          ></el-input>
         </el-form-item>
         <el-form-item class="login_btn">
           <el-button type="primary" size="small">提交</el-button>
           <el-button size="small">重置</el-button>
         </el-form-item>
       </el-form>
+      <span @click="onReturn">返回</span>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
 export default defineComponent({
-  name: 'Login'
+  name: 'Login',
+  setup() {
+    const router = useRouter()
+    const onReturn = () => {
+      router.push('/')
+    }
+    return {
+      onReturn
+    }
+  }
 })
 </script>
 
@@ -74,6 +97,20 @@ export default defineComponent({
       .login_btn {
         margin-top: 20px;
       }
+    }
+    span {
+      position: absolute;
+      bottom: 18px;
+      right: 2px;
+      text-align: center;
+      width: 60px;
+      height: 30px;
+      line-height: 30px;
+      color: rgb(10, 10, 10);
+      cursor: pointer;
+      font-size: 12px;
+      transform: rotate(-45deg);
+      background-color: #ebebeb;
     }
   }
 }
