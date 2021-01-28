@@ -11,7 +11,7 @@
             <el-menu-item>查大学</el-menu-item>
             <el-menu-item>查专业</el-menu-item>
             <el-menu-item>段次线</el-menu-item>
-            <el-tag type="success" hit>开始写文章</el-tag>
+            <el-tag type="success" v-if="tagData" hit>开始写文章</el-tag>
           </el-menu>
         </div>
       </el-col>
@@ -20,7 +20,7 @@
           <el-button size="small" plain @click="onLogin">登录</el-button>
           <el-button size="small" type="primary" plain @click="onSignup">注册</el-button>
         </div>
-        <el-dropdown>
+        <el-dropdown trigger="click" size="small">
           <span class="el-dropdown-link">
             {{ headerData.name }}
             <i class="el-icon-arrow-down el-icon--right"></i>
@@ -48,7 +48,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, PropType } from 'vue'
+import { defineComponent, ref, PropType } from 'vue'
 import { UserProps } from './InterColumn'
 import { useRouter } from 'vue-router'
 export default defineComponent({
@@ -59,6 +59,7 @@ export default defineComponent({
     }
   },
   setup(props) {
+    const tagData = ref(false)
     const headerData = props?.user
     const router = useRouter()
     const onLogin = () => {
@@ -70,6 +71,7 @@ export default defineComponent({
     return {
       onLogin,
       onSignup,
+      tagData,
       headerData
     }
   }

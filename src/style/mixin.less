@@ -1,5 +1,22 @@
 /*增加2@ 与 3@ 配置*/
 
+/*单行文本省略号*/
+.ellips_single {
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*鼠标悬停以后全部显示*/
+
+.ellips_single:hover {
+  width: 100%;
+  display: inline-block;
+  white-space: normal;
+  overflow-y: hidden;
+}
+
 /*多行文本省略号*/
 .ellips {
   overflow: hidden;
@@ -7,7 +24,8 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
-/*自定义阿里图标字体*/ 
+
+/*自定义阿里图标字体*/
 .icon {
   width: 24px;
   height: 24px;
