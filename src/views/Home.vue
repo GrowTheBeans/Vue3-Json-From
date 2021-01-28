@@ -1,6 +1,7 @@
 <template>
-  <GobalHeader />
+  <GobalHeader :user="user" />
   <ColumnList :list="list" />
+  <SchoolsTextAlign />
   <GobalFooter />
 </template>
 
@@ -8,8 +9,9 @@
 import { defineComponent } from 'vue'
 import ColumnList from '../components/ColumnList.vue'
 import GobalHeader from '../components/GobalHeader.vue'
+import SchoolsTextAlign from '../components/SchoolsTextAlign.vue'
 import GobalFooter from '../components/GonalFooter.vue'
-import { ColumnProps } from '../components/InterColumn'
+import { ColumnProps, UserProps } from '../components/InterColumn'
 const testData: ColumnProps[] = [
   {
     id: 1,
@@ -89,16 +91,23 @@ const testData: ColumnProps[] = [
     avatar: require('../assets/logo.png')
   }
 ]
+const userData: UserProps = {
+  id: '001',
+  name: '大粽子',
+  isLogin: true
+}
 export default defineComponent({
   name: 'App',
   components: {
     ColumnList,
     GobalHeader,
-    GobalFooter
+    GobalFooter,
+    SchoolsTextAlign
   },
   setup() {
     return {
-      list: testData
+      list: testData,
+      user: userData
     }
   }
 })

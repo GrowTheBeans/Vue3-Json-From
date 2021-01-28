@@ -16,13 +16,13 @@
         </div>
       </el-col>
       <el-col :span="3">
-        <div v-if="HeaderLogin">
+        <div v-if="headerData.isLogin">
           <el-button size="small" plain @click="onLogin">登录</el-button>
           <el-button size="small" type="primary" plain @click="onSignup">注册</el-button>
         </div>
         <el-dropdown>
           <span class="el-dropdown-link">
-            {{ HeaderName }}
+            {{ headerData.name }}
             <i class="el-icon-arrow-down el-icon--right"></i>
           </span>
           <template #dropdown>
@@ -48,14 +48,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, reactive, PropType } from 'vue'
+import { UserProps } from './InterColumn'
 import { useRouter } from 'vue-router'
 export default defineComponent({
   name: 'GobalHeader',
-  props: {},
-  setup() {
-    const HeaderName = ref('粽子')
-    const HeaderLogin = ref(true)
+  props: {
+    user: {
+      type: Object as PropType<UserProps>
+    }
+  },
+  setup(props) {
+    const headerData = props?.user
     const router = useRouter()
     const onLogin = () => {
       router.push('/login')
@@ -66,8 +70,7 @@ export default defineComponent({
     return {
       onLogin,
       onSignup,
-      HeaderName,
-      HeaderLogin
+      headerData
     }
   }
 })

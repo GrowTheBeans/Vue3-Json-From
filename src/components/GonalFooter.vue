@@ -26,7 +26,6 @@ export default defineComponent({
   justify-content: center;
   color: #6c757d;
   font-size: 0.8em;
-  margin-top: 36px;
   background-color: #f8f9fa;
   .el-link {
     font-size: 12px;

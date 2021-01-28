@@ -13,7 +13,8 @@ export interface ColumnProps {
 }
 // 登录列表数据定义
  export interface UserProps {
-  id?: number,
+  id?: number | string,
   name?: string,
   isLogin: boolean
  }
+// 学校类型Card
