@@ -1,7 +1,7 @@
 <template>
   <GobalHeader :user="user" />
   <ColumnList :list="list" />
-  <SchoolsTextAlign />
+  <SchoolsTextAlign :colleage="colleage" />
   <GobalFooter />
 </template>
 
@@ -11,7 +11,7 @@ import ColumnList from '../components/ColumnList.vue'
 import GobalHeader from '../components/GobalHeader.vue'
 import SchoolsTextAlign from '../components/SchoolsTextAlign.vue'
 import GobalFooter from '../components/GonalFooter.vue'
-import { ColumnProps, UserProps } from '../components/InterColumn'
+import { ColumnProps, UserProps, ColleageProps } from '../components/InterColumn'
 const testData: ColumnProps[] = [
   {
     id: 1,
@@ -96,6 +96,32 @@ const userData: UserProps = {
   name: '大粽子',
   isLogin: false
 }
+const colleageData: ColleageProps[] = [
+  {
+    key: 111,
+    Affiliation: '教育部',
+    City: '北京',
+    Logo: require('../assets/login.svg'),
+    Name: '北京大学',
+    Type: '公办理工'
+  },
+  {
+    key: 222,
+    Affiliation: '公安部',
+    City: '上海',
+    Logo: require('../assets/login.svg'),
+    Name: '上海大学',
+    Type: '理工'
+  },
+  {
+    key: 333,
+    Affiliation: '国防部',
+    City: '浙江',
+    Logo: require('../assets/login.svg'),
+    Name: '浙江大学',
+    Type: '公办'
+  }
+]
 export default defineComponent({
   name: 'App',
   components: {
@@ -107,7 +133,8 @@ export default defineComponent({
   setup() {
     return {
       list: testData,
-      user: userData
+      user: userData,
+      colleage: colleageData
     }
   }
 })

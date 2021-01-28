@@ -12,9 +12,18 @@ export interface ColumnProps {
   description: string
 }
 // 登录列表数据定义
- export interface UserProps {
+export interface UserProps {
   id?: number | string,
   name?: string,
   isLogin: boolean
- }
+}
 // 学校类型Card
+export interface ColleageProps {
+  key: number | string,
+  Affiliation: string,
+  City: string,
+  Logo: string,
+  Name: string,
+  UpdateDate?: Date,
+  Type: string
+}

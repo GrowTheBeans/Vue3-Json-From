@@ -2,22 +2,18 @@
   <div class="schools_text_containers">
     <h2>热门院校</h2>
     <el-row class="row-bg" :gutter="20">
-      <el-col :span="4" v-for="o in 6" :key="o">
+      <el-col :span="4" v-for="item in colleage" :key="item.key">
         <el-card :body-style="{ padding: '10px' }" shadow="never">
-          <sup class="city">上海</sup>
-          <el-image
-            style="width: 120px; height: 120px"
-            src="http://dakaojiang.com/apiServer/File/School/Logo/2018102247167626.jpg"
-            fit="fill"
-          ></el-image>
+          <sup class="city">{{ item.City }}</sup>
+          <el-image style="width: 120px; height: 120px" :src="item.Logo" fit="fill"></el-image>
           <div style="padding: 14px 0">
-            <h4>北京大学</h4>
+            <h4>{{ item.Name }}</h4>
             <div class="bottom">
-              <el-tooltip content="Bottom center" placement="top" effect="light">
+              <el-tooltip :content="item.Affiliation" placement="top" effect="light">
                 <i class="el-icon-info" style="color: #999"></i>
               </el-tooltip>
               <time class="time ellips_single">时间：{{ currentDate }}</time>
-              <span class="ellips_single">{{ Type }}类型大学</span>
+              <span class="ellips_single">{{ item.Type }}类型大学</span>
             </div>
           </div>
         </el-card>
@@ -27,16 +23,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, PropType, ref } from 'vue'
+import { ColleageProps } from './InterColumn'
 import dayjs from 'dayjs'
 export default defineComponent({
   name: 'SchoolsTextAlign',
+  props: {
+    colleage: {
+      type: Array as PropType<ColleageProps[]>
+    }
+  },
   setup() {
     const currentDate = ref(dayjs().format('YYYY-MM-DD'))
-    const Type = ref('综合 财经')
     return {
-      currentDate,
-      Type
+      currentDate
     }
   }
 })
