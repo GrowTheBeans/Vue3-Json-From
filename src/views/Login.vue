@@ -15,7 +15,8 @@
         </el-form-item>
         <el-form-item label="密码" prop="checkPass">
           <el-input
-            prefix-icon="el-icon-view"
+            prefix-icon="el-icon-lock"
+            suffix-icon="el-icon-view"
             size="medium"
             type="password"
             placeholder="请输入密码"
@@ -110,7 +111,7 @@ export default defineComponent({
       cursor: pointer;
       font-size: 12px;
       transform: rotate(-45deg);
-      background-color: #ebebeb;
+      background-color: rgba(0, 0, 0, 0.02);
     }
   }
 }
