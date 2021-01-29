@@ -45,7 +45,7 @@ export default defineComponent({
   setup(props) {
     const loading = ref(true)
     const TagColor = reactive([])
-    setTimeout(() => (loading.value = false), 500)
+    setTimeout(() => (loading.value = false), 1000)
     const imgColumnList = props?.list?.filter((column) => {
       if (!column.avatar) {
         column.avatar = require('./image/svg/book.svg')

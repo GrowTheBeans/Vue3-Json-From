@@ -28,7 +28,9 @@
           <el-button size="small">重置</el-button>
         </el-form-item>
       </el-form>
-      <span @click="onReturn">返回</span>
+      <span @click="onReturn">
+        <i class="el-icon-right"></i>
+      </span>
     </div>
   </div>
 </template>
@@ -101,17 +103,26 @@ export default defineComponent({
     }
     span {
       position: absolute;
-      bottom: 18px;
-      right: 2px;
-      text-align: center;
-      width: 60px;
-      height: 30px;
-      line-height: 30px;
-      color: rgb(10, 10, 10);
+      top: 10px;
+      right: 0px;
       cursor: pointer;
-      font-size: 12px;
-      transform: rotate(-45deg);
-      background-color: rgba(0, 0, 0, 0.02);
+      width: 50px;
+      height: 28px;
+      background: #66b1ff;
+      box-shadow: 0 2px 8px 0 rgb(80 100 142 / 50%);
+      border-radius: 57px 0 0 57px;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      i {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+      }
     }
   }
 }

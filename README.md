@@ -25,3 +25,8 @@
 - [x] **数据结构设计** 利用 `interface`接口定义
 
 -
+
+
+- [x] 富文本框[插件tinymce](https://github.com/tinymce/tinymce)
+
+- [x] 图片裁剪[插件vue-cropper](http://github.xyxiao.cn/vue-cropper/example/)
