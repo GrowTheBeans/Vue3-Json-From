@@ -4,7 +4,7 @@
       <el-col :span="2" class="tl">
         <div class="grid-content">LOGO</div>
       </el-col>
-      <el-col :span="19">
+      <el-col :span="18">
         <div class="grid-content">
           <el-menu mode="horizontal" text-color="#fffef9" active-text-color="#11264f">
             <el-menu-item>三位一体</el-menu-item>
@@ -12,11 +12,18 @@
             <el-menu-item>查大学</el-menu-item>
             <el-menu-item>查专业</el-menu-item>
             <el-menu-item>段次线</el-menu-item>
-            <el-tag type="success" v-if="tagData" hit>开始写文章</el-tag>
+            <el-row type="flex" justify="end" :gutter="10">
+              <el-col :span="4">
+                <el-tag type="success" hit>开始写文章</el-tag>
+              </el-col>
+              <el-col :span="4">
+                <el-tag type="warning" hit>组件库</el-tag>
+              </el-col>
+            </el-row>
           </el-menu>
         </div>
       </el-col>
-      <el-col :span="3">
+      <el-col :span="4">
         <div v-if="headerData.isLogin">
           <el-button size="small" plain @click="onLogin">登录</el-button>
           <el-button size="small" type="primary" plain @click="onSignup">注册</el-button>
