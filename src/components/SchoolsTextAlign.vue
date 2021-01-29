@@ -1,11 +1,11 @@
 <template>
   <div class="schools_text_containers">
     <h2>热门院校</h2>
-    <el-row class="row-bg" :gutter="20">
+    <el-row class="row-bg" :gutter="20" id="Logo">
       <el-col :span="4" v-for="item in colleage" :key="item.key">
         <el-card :body-style="{ padding: '10px' }" shadow="never">
           <sup class="city">{{ item.City }}</sup>
-          <el-image style="width: 120px; height: 120px" :src="item.Logo" fit="fill"></el-image>
+          <img style="width: 120px; height: 120px" :src="item.Logo" />
           <div style="padding: 14px 0">
             <h4>{{ item.Name }}</h4>
             <div class="bottom">
@@ -23,8 +23,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, ref } from 'vue'
+import { defineComponent, onMounted, PropType, ref } from 'vue'
 import { ColleageProps } from './InterColumn'
+import Viewer from 'viewerjs'
 import dayjs from 'dayjs'
 export default defineComponent({
   name: 'SchoolsTextAlign',
@@ -35,6 +36,24 @@ export default defineComponent({
   },
   setup() {
     const currentDate = ref(dayjs().format('YYYY-MM-DD'))
+    onMounted(() => {
+      const viewer = new Viewer(document.getElementById('Logo') as HTMLElement, {
+        navbar: false,
+        button: false,
+        title: 0,
+        toolbar: {
+          zoomIn: 4,
+          zoomOut: 4,
+          play: {
+            show: 4
+          },
+          oneToOne: 4,
+          rotateLeft: 4,
+          rotateRight: 4
+        }
+      })
+      return viewer
+    })
     return {
       currentDate
     }
