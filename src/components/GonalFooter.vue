@@ -11,7 +11,7 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'GonalFooter',
   setup() {
-    const now = Dayjs().format('YYYY年MM月DD日 HH:mm:ss  A')
+    const now = Dayjs().format('YYYY年MM月DD日 HH:mm:ss A')
     return {
       now
     }

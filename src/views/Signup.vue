@@ -5,7 +5,7 @@
       <h3>欢迎注册粽子系统</h3>
       <el-form label-position="top">
         <el-form-item label="邮箱地址">
-          <el-input prefix-icon="el-icon-folder-checked" size="medium" placeholder="请输入邮箱地址"></el-input>
+          <el-input prefix-icon="el-icon-message" size="medium" placeholder="请输入邮箱地址"></el-input>
         </el-form-item>
         <el-form-item label="昵称">
           <el-input prefix-icon="el-icon-user" size="medium" placeholder="请输入昵称"></el-input>

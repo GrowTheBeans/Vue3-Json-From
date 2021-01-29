@@ -68,7 +68,7 @@ export default defineComponent({
     font-family: Helvetica;
   }
   .login_frame {
-    position: absolute;
+    position: fixed;
     right: 396px;
     bottom: 328px;
     width: 396px;

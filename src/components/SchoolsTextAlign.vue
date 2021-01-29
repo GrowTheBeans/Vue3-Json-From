@@ -5,7 +5,7 @@
       <el-col :span="4" v-for="item in colleage" :key="item.key">
         <el-card :body-style="{ padding: '10px' }" shadow="never">
           <sup class="city">{{ item.City }}</sup>
-          <img style="width: 120px; height: 120px" :src="item.Logo" />
+          <img style="width: 120px; height: 120px" :src="item.Logo" :alt="item.Name" />
           <div style="padding: 14px 0">
             <h4>{{ item.Name }}</h4>
             <div class="bottom">
@@ -40,7 +40,7 @@ export default defineComponent({
       const viewer = new Viewer(document.getElementById('Logo') as HTMLElement, {
         navbar: false,
         button: false,
-        title: 0,
+        title: [0, (imageData: { alt: string }) => `${imageData.alt}`],
         toolbar: {
           zoomIn: 4,
           zoomOut: 4,

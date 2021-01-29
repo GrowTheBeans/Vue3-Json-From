@@ -1,35 +1,39 @@
 <template>
   <el-row type="flex" justify="space-around">
     <el-col :span="5" v-for="column in list" :key="column.id">
-      <el-card shadow="hover" :body-style="{ padding: '20px' }">
-        <template #header>
-          <div class="clearfix">
-            <el-tag color="#7bbfea" size="mini" effect="dark" hit>主题</el-tag>
-            <span>Card name</span>
-            <el-button class="header_title" type="text">
-              <el-link :underline="false" type="primary">Operation button</el-link>
-              <el-tooltip class="item" effect="dark" content="Bottom Center 提示文字" placement="bottom">
-                <i class="el-icon-warning-outline el-icon--right"></i>
-              </el-tooltip>
-            </el-button>
-          </div>
+      <el-skeleton animated :loading="loading" :rows="5">
+        <template #default>
+          <el-card shadow="hover" :body-style="{ padding: '20px' }">
+            <template #header>
+              <div class="clearfix">
+                <el-tag color="#7bbfea" size="mini" effect="dark" hit>主题</el-tag>
+                <span>Card name</span>
+                <el-button class="header_title" type="text">
+                  <el-link :underline="false" type="primary">Operation button</el-link>
+                  <el-tooltip class="item" effect="dark" content="Bottom Center 提示文字" placement="bottom">
+                    <i class="el-icon-warning-outline el-icon--right"></i>
+                  </el-tooltip>
+                </el-button>
+              </div>
+            </template>
+            <div class="column_containers">
+              <img :src="column.avatar" :alt="column.title" />
+              <h5>{{ column.title }}</h5>
+              <p class="ellips">{{ column.description }}</p>
+              <el-button plain size="small" type="primary">
+                <span>进入专栏</span>
+                <i class="el-icon-arrow-right el-icon--right"></i>
+              </el-button>
+            </div>
+          </el-card>
         </template>
-        <div class="column_containers">
-          <img :src="column.avatar" :alt="column.title" />
-          <h5>{{ column.title }}</h5>
-          <p class="ellips">{{ column.description }}</p>
-          <el-button plain size="small" type="primary">
-            <span>进入专栏</span>
-            <i class="el-icon-arrow-right el-icon--right"></i>
-          </el-button>
-        </div>
-      </el-card>
+      </el-skeleton>
     </el-col>
   </el-row>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, PropType } from 'vue'
+import { defineComponent, reactive, PropType, ref } from 'vue'
 import { ColumnProps } from './InterColumn'
 export default defineComponent({
   name: 'ColumnList',
@@ -39,6 +43,8 @@ export default defineComponent({
     }
   },
   setup(props) {
+    const loading = ref(true)
+    setTimeout(() => (loading.value = false), 500)
     const imgColumnList = props?.list?.filter((column) => {
       if (!column.avatar) {
         column.avatar = require('./image/svg/book.svg')
@@ -47,7 +53,8 @@ export default defineComponent({
     const TagColor = reactive([])
     return {
       imgColumnList,
-      TagColor
+      TagColor,
+      loading
     }
   }
 })
