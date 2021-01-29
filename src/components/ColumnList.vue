@@ -34,7 +34,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive, PropType, ref } from 'vue'
-import { ColumnProps } from './InterColumn'
+import { ColumnProps } from './InterColumn.type.'
 export default defineComponent({
   name: 'ColumnList',
   props: {
@@ -44,13 +44,13 @@ export default defineComponent({
   },
   setup(props) {
     const loading = ref(true)
+    const TagColor = reactive([])
     setTimeout(() => (loading.value = false), 500)
     const imgColumnList = props?.list?.filter((column) => {
       if (!column.avatar) {
         column.avatar = require('./image/svg/book.svg')
       }
     })
-    const TagColor = reactive([])
     return {
       imgColumnList,
       TagColor,

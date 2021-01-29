@@ -63,12 +63,14 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .signup_container {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
   .signup_left {
     width: 50%;
-    height: 100vh;
+    height: 100%;
     background: url('../components/image/groups@2x.png') no-repeat;
   }
   .signup_right {
@@ -76,6 +78,7 @@ export default defineComponent({
     flex-direction: column;
     justify-content: center;
     width: 50%;
+    height: 100%;
     background: url('../components/image/BG@2x.png') no-repeat bottom;
     background-size: 100%;
     h3 {

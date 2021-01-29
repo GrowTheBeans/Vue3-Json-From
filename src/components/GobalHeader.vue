@@ -12,7 +12,7 @@
             <el-menu-item>查大学</el-menu-item>
             <el-menu-item>查专业</el-menu-item>
             <el-menu-item>段次线</el-menu-item>
-            <el-row type="flex" justify="end" :gutter="10">
+            <el-row type="flex" justify="end" :gutter="10" class="tag_el_row">
               <el-col :span="4">
                 <el-tag type="success" hit>开始写文章</el-tag>
               </el-col>
@@ -57,7 +57,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, PropType } from 'vue'
-import { UserProps } from './InterColumn'
+import { UserProps } from './InterColumn.type.'
 import { useRouter } from 'vue-router'
 export default defineComponent({
   name: 'GobalHeader',
@@ -119,5 +119,8 @@ export default defineComponent({
 }
 .el-icon-arrow-down {
   font-size: 14px;
+}
+:deep(.tag_el_row:active) {
+  border: none;
 }
 </style>

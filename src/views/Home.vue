@@ -11,7 +11,7 @@ import ColumnList from '../components/ColumnList.vue'
 import GobalHeader from '../components/GobalHeader.vue'
 import SchoolsTextAlign from '../components/SchoolsTextAlign.vue'
 import GobalFooter from '../components/GonalFooter.vue'
-import { ColumnProps, UserProps, ColleageProps } from '../components/InterColumn'
+import { ColumnProps, UserProps, ColleageProps } from '../components/InterColumn.type.'
 const testData: ColumnProps[] = [
   {
     id: 1,

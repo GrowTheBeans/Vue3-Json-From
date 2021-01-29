@@ -24,7 +24,7 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, PropType, ref } from 'vue'
-import { ColleageProps } from './InterColumn'
+import { ColleageProps } from './InterColumn.type.'
 import Viewer from 'viewerjs'
 import dayjs from 'dayjs'
 export default defineComponent({
