@@ -18,11 +18,11 @@
 }
 
 /*多行文本省略号*/
-.ellips {
+.ellips(@lines) {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: @lines;
 }
 
 /*自定义阿里图标字体*/

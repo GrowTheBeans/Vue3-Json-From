@@ -19,7 +19,7 @@
             <div class="column_containers">
               <img :src="column.avatar" :alt="column.title" />
               <h5>{{ column.title }}</h5>
-              <p class="ellips">{{ column.description }}</p>
+              <p>{{ column.description }}</p>
               <el-button plain size="small" type="primary">
                 <span>进入专栏</span>
                 <i class="el-icon-arrow-right el-icon--right"></i>
@@ -61,6 +61,7 @@ export default defineComponent({
 </script>
 
 <style lang="less" scoped>
+@import "../style/mixin.less";
 .header_title {
   display: flex;
   align-items: center;
@@ -95,6 +96,7 @@ export default defineComponent({
     font-family: Helvetica;
   }
   p {
+    .ellips(3);
     text-indent: 1.5em;
     letter-spacing: 1.5px;
     line-height: 18px;

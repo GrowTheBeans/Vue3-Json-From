@@ -38,6 +38,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
+
 export default defineComponent({
   name: 'Login',
   setup() {
@@ -60,15 +61,16 @@ export default defineComponent({
   height: 100vh;
   background: url('../components/image/img_bg@2x.png') no-repeat;
   background-size: cover; // 注意顺序问题
+
   h1 {
     margin: 100px auto;
-    margin-top: 100px;
     letter-spacing: 8px;
     font-size: 32px;
     color: #fff;
     font-weight: 500;
     font-family: Helvetica;
   }
+
   .login_frame {
     position: fixed;
     right: 396px;
@@ -80,11 +82,13 @@ export default defineComponent({
     padding: 20px 32px;
     box-sizing: border-box;
     box-shadow: 0px, 5px, 29px, 0px, rgba(82, 82, 82, 0.36);
+
     h3 {
       display: flex;
       align-items: center;
       font-size: 20px;
       color: #333;
+
       &::before {
         content: '';
         display: inline-block;
@@ -95,12 +99,15 @@ export default defineComponent({
         background-color: #409eff;
       }
     }
+
     .demo-ruleForm {
       margin-top: 40px;
+
       .login_btn {
         margin-top: 20px;
       }
     }
+
     span {
       position: absolute;
       top: 10px;
@@ -118,6 +125,7 @@ export default defineComponent({
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
+
       i {
         color: #fff;
         font-size: 14px;
