@@ -92,10 +92,10 @@ export default {
   }
 
   .home_title {
-    color: #3a3a3a;
+    color: #fff;
     font-size: 32px;
     font-weight: bold;
-    text-shadow: 1px 1px 4px #fff;
+    text-shadow: 1px 1px 4px #a3a3a3;
     margin-bottom: 80px;
   }
 
