@@ -11,12 +11,14 @@ export interface ColumnProps {
   excerpt?: string
   description: string
 }
+
 // 登录列表数据定义
 export interface UserProps {
   id?: number | string
   name?: string
   isLogin: boolean
 }
+
 // 学校类型Card
 export interface ColleageProps {
   key: number | string
