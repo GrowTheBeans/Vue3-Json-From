@@ -3,6 +3,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 const Home = () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
 const Login = () => import(/* webpackChunkName: "login" */ '../views/Login.vue')
 const Signup = () => import(/* webpackChunkName: "signup" */ '../views/Signup.vue')
+const Posts = () => import(/* webpackChunkName: "posts" */ '../views/Posts.vue')
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -11,6 +12,14 @@ const routes: Array<RouteRecordRaw> = [
     component: Home,
     meta: {
       title: '首页'
+    }
+  },
+  {
+    path: '/posts',
+    name: 'Posts',
+    component: Posts,
+    meta: {
+      title: '详情'
     }
   },
   {

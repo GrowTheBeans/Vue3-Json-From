@@ -20,7 +20,7 @@
               <img :src="column.avatar" :alt="column.title" />
               <h5>{{ column.title }}</h5>
               <p>{{ column.description }}</p>
-              <el-button plain size="small" type="primary">
+              <el-button plain size="small" type="primary" @click="onPosts">
                 <span>进入专栏</span>
                 <i class="el-icon-arrow-right el-icon--right"></i>
               </el-button>
@@ -35,6 +35,7 @@
 <script lang="ts">
 import { defineComponent, reactive, PropType, ref } from 'vue'
 import { ColumnProps } from './InterColumn.type.'
+import { useRouter } from 'vue-router'
 export default defineComponent({
   name: 'ColumnList',
   props: {
@@ -45,6 +46,10 @@ export default defineComponent({
   setup(props) {
     const loading = ref(true)
     const TagColor = reactive([])
+    const router = useRouter()
+    const onPosts = () => {
+      router.push('/posts')
+    }
     setTimeout(() => (loading.value = false), 1000)
     const imgColumnList = props?.list?.filter((column) => {
       if (!column.avatar) {
@@ -54,7 +59,8 @@ export default defineComponent({
     return {
       imgColumnList,
       TagColor,
-      loading
+      loading,
+      onPosts
     }
   }
 })
