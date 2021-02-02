@@ -110,6 +110,7 @@ export default defineComponent({
     margin-bottom: 20px;
   }
   .el-button {
+    cursor: pointer;
     position: absolute;
     bottom: 20px;
   }
