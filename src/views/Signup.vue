@@ -13,15 +13,15 @@
         <el-form-item label="密码">
           <el-input
             prefix-icon="el-icon-lock"
-            suffix-icon="el-icon-view"
             size="medium"
+            show-password
             placeholder="请输入密码"
           ></el-input>
         </el-form-item>
         <el-form-item label="重复密码">
           <el-input
             prefix-icon="el-icon-lock"
-            suffix-icon="el-icon-view"
+            show-password
             size="medium"
             placeholder="请再次输入密码"
           ></el-input>

@@ -14,7 +14,7 @@
             <el-menu-item>段次线</el-menu-item>
             <el-row type="flex" justify="end" :gutter="10" class="tag_el_row">
               <el-col :span="4">
-                <el-tag type="success" hit>开始写文章</el-tag>
+                <el-tag type="success" hit @click="onCreate">开始写文章</el-tag>
               </el-col>
               <el-col :span="4">
                 <el-tag type="warning" hit>组件库</el-tag>
@@ -76,11 +76,15 @@ export default defineComponent({
     const onSignup = () => {
       router.push('/signup')
     }
+    const onCreate = () => {
+      router.push('/create')
+    }
     return {
       onLogin,
       onSignup,
       tagData,
-      headerData
+      headerData,
+      onCreate
     }
   }
 })

@@ -4,6 +4,7 @@ const Home = () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
 const Login = () => import(/* webpackChunkName: "login" */ '../views/Login.vue')
 const Signup = () => import(/* webpackChunkName: "signup" */ '../views/Signup.vue')
 const Posts = () => import(/* webpackChunkName: "posts" */ '../views/Posts.vue')
+const Create = () => import(/* webpackChunkName: "create" */ '../views/Create.vue')
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -20,6 +21,14 @@ const routes: Array<RouteRecordRaw> = [
     component: Posts,
     meta: {
       title: '详情'
+    }
+  },
+  {
+    path: '/create',
+    name: 'Create',
+    component: Create,
+    meta: {
+      title: '写文章'
     }
   },
   {

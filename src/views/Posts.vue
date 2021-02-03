@@ -60,7 +60,7 @@
                     size="small"
                     start-placeholder="开始日期"
                     end-placeholder="结束日期"
-                   >
+                  >
                   </el-date-picker>
                 </div>
               </el-col>
@@ -92,14 +92,21 @@
 </template>
 
 <script type="text/ecmascript-6">
-export default {
+import { defineComponent } from 'vue'
+import { useRouter } from 'vue-router'
+
+export default defineComponent({
   name: 'Posts',
-  methods: {
-    goBack() {
-      console.log(2)
+  setup() {
+    const router = useRouter()
+    const goBack = () => {
+      router.push('/')
+    }
+    return {
+      goBack
     }
   }
-}
+})
 </script>
 
 <style scoped lang="less">
@@ -196,6 +203,7 @@ export default {
         height: 50%;
         border-radius: 4px;
       }
+
       .contents {
         padding: 20px 200px;
       }
