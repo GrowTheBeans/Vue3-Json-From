@@ -56,4 +56,4 @@ module.exports = {
 
 - [x] `rem`进行布局
 
-
+- [x] 表单验证插件[vee-validate](https://vee-validate.logaretm.com/v4/)
