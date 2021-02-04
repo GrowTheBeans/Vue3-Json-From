@@ -1,10 +1,13 @@
 <template>
   <div class="logins">
-    <div class="jd__logo"></div>
+    <header>
+      <div class="jd__logo"></div>
+      <h1>京东购物</h1>
+    </header>
     <div class="jd__form">
-      <input type="text" placeholder="请输入手机号" maxlength="11" minlength="6"/>
-      <input type="password" placeholder="请输入密码" maxlength="30" minlength="6"/>
-      <input type="password" placeholder="确认密码" maxlength="30" minlength="6"/>
+      <input class="phone" type="text" placeholder="请输入手机号" maxlength="11" minlength="6"/>
+      <input class="password" type="password" placeholder="请输入密码" maxlength="30" minlength="6"/>
+      <input class="password" type="password" placeholder="确认密码" maxlength="30" minlength="6"/>
       <button class="logins-button">注册</button>
     </div>
     <div class="jd__logins--footer">
@@ -36,14 +39,24 @@ export default defineComponent({
   padding: 0 40px;
   box-sizing: border-box;
 
-  .jd__logo {
-    width: 66px;
-    height: 66px;
-    margin-bottom: 40px;
-    background: url("../../../assets/logo.png") no-repeat center center;
-    background-size: 100% 100%;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, .10);
+  header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+
+    .jd__logo {
+      width: 66px;
+      height: 66px;
+      margin: 0 10px;
+      background: url("../../../assets/jd/logo.png") no-repeat center center;
+      background-size: 100% 100%;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: 500;
+      font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+    }
   }
 
   .jd__form {
@@ -64,6 +77,18 @@ export default defineComponent({
       background: #F9F9F9;
     }
 
+    .phone {
+      background: url(../../../assets/svg/phone.svg) no-repeat 6px center; /*设置小图标*/
+      background-size: 20px 20px; /*小图标的大小*/
+      padding: 8px 0 8px 30px; /*设置input内边距*/
+    }
+
+    .password {
+      background: url(../../../assets/svg/password.svg) no-repeat 6px center; /*设置小图标*/
+      background-size: 20px 20px; /*小图标的大小*/
+      padding: 8px 0 8px 30px; /*设置input内边距*/
+    }
+
     .logins-button {
       color: #fff;
       font-size: 16px;
@@ -72,10 +97,6 @@ export default defineComponent({
       box-shadow: 0 4px 8px 0 rgba(0, 145, 255, .32);
       border-radius: 4px;
     }
-  }
-
-  .jd__logins--footer {
-    display: flex;
   }
 }
 </style>
