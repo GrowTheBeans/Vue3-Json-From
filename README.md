@@ -53,3 +53,7 @@ module.exports = {
 - [x] 移动端 `1px` 
 
 - [x] 国际化
+
+- [x] `rem`进行布局
+
+

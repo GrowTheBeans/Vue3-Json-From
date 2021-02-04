@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory} from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Success from "../components/success.vue";
 
@@ -11,15 +11,13 @@ const routes = [
   {
     path: "/about",
     name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/About.vue"),
     children: [
       {
         path: "home",
         component: () => import("../views/TabBar/Home.vue"),
-        redirect: {name: "recommend"},
+        redirect: { name: "recommend" },
         children: [
           {
             path: "recommend",
@@ -35,13 +33,13 @@ const routes = [
             path: "ranking",
             name: "ranking",
             component: () => import("../views/TabBar/Music/ranking.vue"),
-          }
+          },
         ],
       },
       {
         path: "detail",
         component: () => import("../views/TabBar/Detail.vue"),
-        redirect: {name: "seller"},
+        redirect: { name: "seller" },
         children: [
           {
             path: "seller",
@@ -57,7 +55,7 @@ const routes = [
             path: "ratings",
             name: "ratings",
             component: () => import("../views/TabBar/Order/ratings.vue"),
-          }
+          },
         ],
       },
       {
@@ -66,11 +64,31 @@ const routes = [
       },
       {
         path: "study",
-        component: () => import("../views/TabBar/Study.vue")
+        component: () => import("../views/TabBar/Study.vue"),
       },
       {
         path: "mine",
         component: () => import("../views/TabBar/Mine.vue"),
+      },
+    ],
+  },
+  {
+    path: "/mjd",
+    component: () => import("../views/Mjd/index.vue"),
+    children: [
+      {
+        path: "",
+        component: () => import("../views/Mjd/pages/Home.vue"),
+      },
+      {
+        path: "logins",
+        name: "Logins",
+        component: () => import("../views/Mjd/pages/Logins"),
+      },
+      {
+        path: "register",
+        name: "Register",
+        component: () => import("../views/Mjd/pages/Register.vue"),
       },
     ],
   },
