@@ -81,16 +81,6 @@ const routes = [
         component: () => import("../views/Mjd/pages/Home.vue"),
       },
       {
-        path: "logins",
-        name: "Logins",
-        component: () => import("../views/Mjd/pages/Logins"),
-      },
-      {
-        path: "register",
-        name: "Register",
-        component: () => import("../views/Mjd/pages/Register.vue"),
-      },
-      {
         path: "shopping",
         name: "Shopping",
         component: () => import("../views/Mjd/pages/Shopping.vue"),
@@ -104,6 +94,16 @@ const routes = [
         path: "my",
         name: "My",
         component: () => import("../views/Mjd/pages/My.vue"),
+      },
+      {
+        path: "logins",
+        name: "Logins",
+        component: () => import("../views/Mjd/pages/Logins"),
+      },
+      {
+        path: "register",
+        name: "Register",
+        component: () => import("../views/Mjd/pages/Register.vue"),
       },
     ],
   },
