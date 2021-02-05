@@ -1,13 +1,13 @@
 <template>
   <!-- 验证后续加入 -->
   <div class="survry">
-    <h3 class="banner_title">企业用工需求调查问卷</h3>
+    <h3 class="banner__title">企业用工需求调查问卷</h3>
     <van-form
       @submit="onSubmit"
       label-width="140px"
       error-message-align="right"
       input-align="right"
-      class="survry_form_containers"
+      class="survry__form-containers"
     >
       <van-field
         v-model="state.QuestionInfo.CorpName"
@@ -62,74 +62,74 @@
         placeholder="请输入对外招聘邮箱"
         :rules="[{ required: true, message: '请填写对外招聘邮箱' }]"
       />
-<!--      <van-field-->
-<!--        v-model="state.QuestionInfo.CorpCreditCode"-->
-<!--        type="password"-->
-<!--        name="密码"-->
-<!--        label="企业所属镇(区)"-->
-<!--        is-link-->
-<!--        required-->
-<!--        placeholder="请输入企业所属镇(区)"-->
-<!--        :rules="[{ required: true, message: '请填写企业所属镇(区)' }]"-->
-<!--      />-->
-<!--      <van-field-->
-<!--        v-model="state.QuestionInfo.CorpCreditCode"-->
-<!--        type="password"-->
-<!--        name="密码"-->
-<!--        label="企业所属行业"-->
-<!--        is-link-->
-<!--        required-->
-<!--        placeholder="请输入企业所属行业"-->
-<!--        :rules="[{ required: true, message: '请填写企业所属行业' }]"-->
-<!--      />-->
-<!--      <van-field-->
-<!--        v-model="state.QuestionInfo.CorpCreditCode"-->
-<!--        type="password"-->
-<!--        name="密码"-->
-<!--        label="企业登记注册类型"-->
-<!--        is-link-->
-<!--        required-->
-<!--        placeholder="请输入企业登记注册类型"-->
-<!--        :rules="[{ required: true, message: '请填写企业登记注册类型' }]"-->
-<!--      />-->
-<!--      <van-field-->
-<!--        v-model="state.QuestionInfo.CorpCreditCode"-->
-<!--        type="password"-->
-<!--        name="密码"-->
-<!--        label="企业目前员工人数"-->
-<!--        is-link-->
-<!--        required-->
-<!--        placeholder="请输入企业目前员工人数"-->
-<!--        :rules="[{ required: true, message: '请填写企业目前员工人数' }]"-->
-<!--      />-->
-<!--      <van-field-->
-<!--        v-model="state.QuestionInfo.CorpCreditCode"-->
-<!--        type="password"-->
-<!--        name="密码"-->
-<!--        label="其中外地员工人数"-->
-<!--        required-->
-<!--        placeholder="请输入其中外地员工人数"-->
-<!--        :rules="[{ required: true, message: '请填写其中外地员工人数' }]"-->
-<!--      />-->
-<!--      <van-field-->
-<!--        v-model="state.QuestionInfo.CorpCreditCode"-->
-<!--        type="password"-->
-<!--        name="密码"-->
-<!--        label="其中女性员工人数"-->
-<!--        required-->
-<!--        placeholder="请输入其中女性员工人数"-->
-<!--        :rules="[{ required: true, message: '请填写其中女性员工人数' }]"-->
-<!--      />-->
-<!--      <van-field-->
-<!--        v-model="state.QuestionInfo.CorpCreditCode"-->
-<!--        type="password"-->
-<!--        name="密码"-->
-<!--        label="企业何时复工"-->
-<!--        is-link-->
-<!--        required-->
-<!--        placeholder="请输入企业何时复工时间"-->
-<!--        :rules="[{ required: true, message: '请填写企业何时复工时间' }]"-->
-<!--      />-->
+      <van-field
+        v-model="state.QuestionInfo.CorpCreditCode"
+        type="password"
+        name="密码"
+        label="企业所属镇(区)"
+        is-link
+        required
+        placeholder="请输入企业所属镇(区)"
+        :rules="[{ required: true, message: '请填写企业所属镇(区)' }]"
+      />
+      <van-field
+        v-model="state.QuestionInfo.CorpCreditCode"
+        type="password"
+        name="密码"
+        label="企业所属行业"
+        is-link
+        required
+        placeholder="请输入企业所属行业"
+        :rules="[{ required: true, message: '请填写企业所属行业' }]"
+      />
+      <van-field
+        v-model="state.QuestionInfo.CorpCreditCode"
+        type="password"
+        name="密码"
+        label="企业登记注册类型"
+        is-link
+        required
+        placeholder="请输入企业登记注册类型"
+        :rules="[{ required: true, message: '请填写企业登记注册类型' }]"
+      />
+      <van-field
+        v-model="state.QuestionInfo.CorpCreditCode"
+        type="password"
+        name="密码"
+        label="企业目前员工人数"
+        is-link
+        required
+        placeholder="请输入企业目前员工人数"
+        :rules="[{ required: true, message: '请填写企业目前员工人数' }]"
+      />
+      <van-field
+        v-model="state.QuestionInfo.CorpCreditCode"
+        type="password"
+        name="密码"
+        label="其中外地员工人数"
+        required
+        placeholder="请输入其中外地员工人数"
+        :rules="[{ required: true, message: '请填写其中外地员工人数' }]"
+      />
+      <van-field
+        v-model="state.QuestionInfo.CorpCreditCode"
+        type="password"
+        name="密码"
+        label="其中女性员工人数"
+        required
+        placeholder="请输入其中女性员工人数"
+        :rules="[{ required: true, message: '请填写其中女性员工人数' }]"
+      />
+      <van-field
+        v-model="state.QuestionInfo.CorpCreditCode"
+        type="password"
+        name="密码"
+        label="企业何时复工"
+        is-link
+        required
+        placeholder="请输入企业何时复工时间"
+        :rules="[{ required: true, message: '请填写企业何时复工时间' }]"
+      />
       <van-field name="radio" required label="现阶段是否缺工">
         <template #input>
           <van-radio-group v-model="checked" direction="horizontal">
@@ -174,16 +174,16 @@ export default {
 </script>
 <style scoped lang="less">
 .survry {
-  .banner_title {
+  .banner__title {
     width: 100%;
     height: 40px;
     line-height: 40px;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
-    font-weight: bold;
-    color: aliceblue;
+    font-weight: 500;
+    color: #fff;
   }
-  .survry_form_containers {
+  .survry__form-containers {
     padding: 0 10px 10px 10px;
     border-radius: 14px;
   }

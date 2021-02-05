@@ -22,6 +22,7 @@ import {
   Notify,
   NavBar,
   Tab,
+  Tag,
   Tabs,
   Switch,
   Tabbar,
@@ -47,6 +48,7 @@ createApp(App)
   .use(NavBar)
   .use(Switch)
   .use(Tab)
+  .use(Tag)
   .use(Tabs)
   .use(Tabbar)
   .use(Divider)

@@ -7,8 +7,8 @@
         inactive-color="#0d1117"
       />
     </div>
-    <h1 class="home_title">Vue3项目测试案例</h1>
-    <div class="home_container">
+    <h1 class="home__title">Vue3项目测试案例</h1>
+    <div class="home__container">
       <div class="title">疫情期间企业用工需求调查问卷</div>
       <main>
         为落实市委、市政府关于支持企业共渡难关的政策意见，在确保做好防疫工作的前提下，保障各类企业用工复产，切实掌握我市企业用工需求动态变化情况。现对全市规模以上企业开展用工需求调查，帮助企业尽快复工复产、摆脱疫情影响。
@@ -20,7 +20,7 @@
           label="用户名"
           label-width="3em"
           required
-          placeholder="请输入用户名..."
+          placeholder="请输入用户名"
           :rules="[{ required: true, message: '请填写用户名' }]"
         />
         <van-field
@@ -30,7 +30,7 @@
           label="密码"
           label-width="3em"
           required
-          placeholder="请输入密码..."
+          placeholder="请输入密码"
           :rules="[{ required: true, message: '请填写密码' }]"
         />
         <span class="marking">
@@ -91,7 +91,7 @@ export default {
     top: 10px;
   }
 
-  .home_title {
+  &__title {
     color: #fff;
     font-size: 32px;
     font-weight: bold;
@@ -99,7 +99,7 @@ export default {
     margin-bottom: 80px;
   }
 
-  .home_container {
+  &__container {
     width: 90%;
     height: 450px;
     border-radius: 10px;
@@ -107,7 +107,7 @@ export default {
     box-sizing: border-box;
     background-color: #fff;
 
-    .title {
+    > .title {
       text-align: center;
       line-height: 32px;
       font-weight: 600;
