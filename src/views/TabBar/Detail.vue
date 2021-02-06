@@ -12,13 +12,14 @@
         <router-link to="/about/detail/ratings">商家</router-link>
       </div>
     </div>
-    <router-view />
+    <router-view/>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
 import OrderHeader from "./Order/components/OrderHeader";
 import axios from "axios";
+
 export default {
   name: "Detail",
   components: {
@@ -36,7 +37,7 @@ export default {
           const seller = res.data.data;
           this.Seller = seller;
         });
-      }catch (e) {
+      } catch (e) {
         // TODO
       }
     },

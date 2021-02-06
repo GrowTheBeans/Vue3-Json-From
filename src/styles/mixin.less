@@ -18,4 +18,44 @@
   }
 }
 
+/*icon图标插入input*/
+.svg-input() {
+  background-size: 20px 20px; /*小图标的大小*/
+  padding: 8px 0 8px 30px; /*设置input内边距*/
+}
+
 /*设置1px*/
+.hairline-common() {
+  position: absolute;
+  box-sizing: border-box;
+  content: ' ';
+  pointer-events: none;
+}
+
+.hairline(@color: "#ebedf0") {
+  .hairline-common();
+  top: -50%;
+  right: -50%;
+  bottom: -50%;
+  left: -50%;
+  border: 0 solid @color;
+  transform: scale(.5);
+}
+
+.hairline-top(@color: "#ebedf0", @left: 0, @right: 0) {
+  .hairline-common();
+  top: 0;
+  right: @right;
+  left: @left;
+  border-top: 1px solid @color;
+  transform: scale(.5);
+}
+
+.hairline-bottom(@color: "#ebedf0", @left: 0, @right: 0) {
+  .hairline-common();
+  right: @right;
+  bottom: 0;
+  left: @left;
+  border-bottom: 1px solid @color;
+  transform: scale(.5);
+}

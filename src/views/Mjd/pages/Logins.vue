@@ -26,16 +26,17 @@ export default defineComponent({
 
 <style scoped lang="less">
 @import "../../../styles/var.less";
+@import "../../../styles/mixin.less";
 
 .logins {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 0.14em;
   background: #fff;
-  width: 100%;
-  height: 100%;
   padding: 0 40px;
   box-sizing: border-box;
 
@@ -79,14 +80,12 @@ export default defineComponent({
 
     .phone {
       background: url(../../../assets/svg/phone.svg) no-repeat 6px center; /*设置小图标*/
-      background-size: 20px 20px; /*小图标的大小*/
-      padding: 8px 0 8px 30px; /*设置input内边距*/
+      .svg-input();
     }
 
     .password {
       background: url(../../../assets/svg/password.svg) no-repeat 6px center; /*设置小图标*/
-      background-size: 20px 20px; /*小图标的大小*/
-      padding: 8px 0 8px 30px; /*设置input内边距*/
+      .svg-input();
     }
 
     .logins-button {
