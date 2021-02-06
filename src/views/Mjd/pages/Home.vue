@@ -22,7 +22,7 @@
       </li>
       <li>
         <img
-          src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png"
+          src="//m.360buyimg.com/mobilecms/s120x120_jfs/t1/113589/24/11332/4897/5efbf3feE705d87db/e5c12d5e943266b9.png"
           alt=""/>
         <span>京东超市</span>
       </li>
@@ -34,7 +34,7 @@
       </li>
       <li>
         <img
-          src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png"
+          src="//m.360buyimg.com/mobilecms/s120x120_jfs/t1/140012/8/1804/3641/5efbf318E38bd5dad/0db99d859ab16ce9.png"
           alt=""/>
         <span>京东超市</span>
       </li>
@@ -116,7 +116,6 @@ export default defineComponent({
   .search {
     background: #F5F5F5;
     border-radius: 16px;
-    //margin-top: 18px;
 
     input {
       padding: 0 16px;
@@ -149,17 +148,19 @@ export default defineComponent({
     flex-direction: row;
     align-items: center;
     text-align: center;
-    //justify-content: space-between;
     flex-wrap: wrap;
     li {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      width: 25%;
       img {
-        width: 20%;
-        //height: 100%;
+        margin-top: 10px;
+        width: 40px;
       }
       span {
-        font-size: 14px;
+        margin-top: 6px;
+        font-size: 12px;
         color: #666666;
       }
     }
