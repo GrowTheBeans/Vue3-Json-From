@@ -16,126 +16,26 @@
           alt="banner"/>
       </div>
       <ul class="slideshow__container">
-        <li>
+        <li v-for="(icon, index) in iconList" :key="index">
           <img
-            src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png"
+            :src="icon.img"
             alt=""/>
-          <span>京东超市</span>
-        </li>
-        <li>
-          <img
-            src="//m.360buyimg.com/mobilecms/s120x120_jfs/t1/113589/24/11332/4897/5efbf3feE705d87db/e5c12d5e943266b9.png"
-            alt=""/>
-          <span>京东超市</span>
-        </li>
-        <li>
-          <img
-            src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png"
-            alt=""/>
-          <span>京东超市</span>
-        </li>
-        <li>
-          <img
-            src="//m.360buyimg.com/mobilecms/s120x120_jfs/t1/140012/8/1804/3641/5efbf318E38bd5dad/0db99d859ab16ce9.png"
-            alt=""/>
-          <span>京东超市</span>
-        </li>
-        <li>
-          <img
-            src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png"
-            alt=""/>
-          <span>京东超市</span>
-        </li>
-        <li>
-          <img
-            src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png"
-            alt=""/>
-          <span>京东超市</span>
-        </li>
-        <li>
-          <img
-            src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png"
-            alt=""/>
-          <span>京东超市</span>
-        </li>
-        <li>
-          <img
-            src="https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png"
-            alt=""/>
-          <span>京东超市</span>
+          <span>{{icon.desc}}</span>
         </li>
       </ul>
       <div class="nearby">
         <h3>附近店铺</h3>
         <ul class="nearby__container">
-          <li>
+          <li v-for="(nearby, index) in nearbyList" :key="index">
             <img
               src="//img10.360buyimg.com/mobilecms/s372x372_jfs/t1/134155/17/8787/199125/5f4c6e07E6f9969fd/b9ad661cae84cb50.jpg"
               alt="">
             <div class="neardy__listing">
-              <h5>沃尔玛</h5>
+              <h5>{{nearby.title}}</h5>
               <div class="neardy__listing-tags">
-                <span>月售1万+</span>
-                <span>起送¥0</span>
-                <span>基础运费¥5</span>
+                <span v-for="(tags, key) in nearby.tags" :key="key">{{tags}}</span>
               </div>
-              <p>VIP尊享满89元减4元运费券（每月3张）</p>
-            </div>
-          </li>
-          <li>
-            <img
-              src="//img10.360buyimg.com/mobilecms/s372x372_jfs/t1/134155/17/8787/199125/5f4c6e07E6f9969fd/b9ad661cae84cb50.jpg"
-              alt="">
-            <div class="neardy__listing">
-              <h5>沃尔玛</h5>
-              <div class="neardy__listing-tags">
-                <span>月售1万+</span>
-                <span>起送¥0</span>
-                <span>基础运费¥5</span>
-              </div>
-              <p>VIP尊享满89元减4元运费券（每月3张）</p>
-            </div>
-          </li>
-          <li>
-            <img
-              src="//img10.360buyimg.com/mobilecms/s372x372_jfs/t1/134155/17/8787/199125/5f4c6e07E6f9969fd/b9ad661cae84cb50.jpg"
-              alt="">
-            <div class="neardy__listing">
-              <h5>沃尔玛</h5>
-              <div class="neardy__listing-tags">
-                <span>月售1万+</span>
-                <span>起送¥0</span>
-                <span>基础运费¥5</span>
-              </div>
-              <p>VIP尊享满89元减4元运费券（每月3张）</p>
-            </div>
-          </li>
-          <li>
-            <img
-              src="//img10.360buyimg.com/mobilecms/s372x372_jfs/t1/134155/17/8787/199125/5f4c6e07E6f9969fd/b9ad661cae84cb50.jpg"
-              alt="">
-            <div class="neardy__listing">
-              <h5>沃尔玛</h5>
-              <div class="neardy__listing-tags">
-                <span>月售1万+</span>
-                <span>起送¥0</span>
-                <span>基础运费¥5</span>
-              </div>
-              <p>VIP尊享满89元减4元运费券（每月3张）</p>
-            </div>
-          </li>
-          <li>
-            <img
-              src="//img10.360buyimg.com/mobilecms/s372x372_jfs/t1/134155/17/8787/199125/5f4c6e07E6f9969fd/b9ad661cae84cb50.jpg"
-              alt="">
-            <div class="neardy__listing">
-              <h5>沃尔玛</h5>
-              <div class="neardy__listing-tags">
-                <span>月售1万+</span>
-                <span>起送¥0</span>
-                <span>基础运费¥5</span>
-              </div>
-              <p>VIP尊享满89元减4元运费券（每月3张）</p>
+              <p>{{nearby.desc}}</p>
             </div>
           </li>
         </ul>
@@ -148,7 +48,58 @@
 import {defineComponent} from "vue"
 
 export default defineComponent({
-  name: "Home"
+  name: "Home",
+  setup() {
+    const nearbyList = [
+      {
+        title: '沃尔玛',
+        tags: ['月售1万+', '起送¥0', '基础运费¥5'],
+        desc: 'VIP尊享满89元减4元运费券（每月3张）'
+      },
+      {
+        title: '沃尔玛',
+        tags: ['月售1万+', '起送¥0', '基础运费¥5'],
+        desc: 'VIP尊享满89元减4元运费券（每月3张）'
+      },
+      {
+        title: '沃尔玛',
+        tags: ['月售1万+', '起送¥0', '基础运费¥5'],
+        desc: 'VIP尊享满89元减4元运费券（每月3张）'
+      },
+      {
+        title: '沃尔玛',
+        tags: ['月售1万+', '起送¥0', '基础运费¥5'],
+        desc: 'VIP尊享满89元减4元运费券（每月3张）'
+      },
+      {
+        title: '沃尔玛',
+        tags: ['月售1万+', '起送¥0', '基础运费¥5'],
+        desc: 'VIP尊享满89元减4元运费券（每月3张）'
+      },
+    ]
+    const iconList = [
+      {
+        img: 'https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png',
+        desc: '京东超市'
+      },
+      {
+        img: 'https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png',
+        desc: '京东超市'
+      },
+      {
+        img: 'https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png',
+        desc: '京东超市'
+      },
+      {
+        img: 'https://m.360buyimg.com/mobilecms/s120x120_jfs/t1/125678/35/5947/4868/5efbf28cEbf04a25a/e2bcc411170524f0.png',
+        desc: '京东超市'
+      }
+    ]
+    return {
+      nearbyList,
+      iconList
+    }
+  }
 })
 </script>
 
@@ -265,6 +216,16 @@ export default defineComponent({
       font-size: 16px;
       font-weight: 600;
       color: @jd__color-gray;
+      vertical-align: middle;
+      &::before {
+        content: '';
+        vertical-align: top;
+        display: inline-block;
+        width: 4px;
+        height: 16px;
+        margin-right: 8px;
+        background: @jd__font-red;
+      }
     }
 
     &__container {
@@ -277,11 +238,31 @@ export default defineComponent({
         margin: 14px 0;
         background: #fff;
         border-radius: 4px;
-        border: 1px solid #0e99ff;
+        box-shadow: 0 0 8px 0 #dadada;
 
         img {
           width: 56px;
           height: 56px;
+        }
+        .neardy__listing {
+          margin-left: 16px;
+          h5 {
+            font-size: 16px;
+          }
+          .neardy__listing-tags {
+            display: flex;
+            margin: 8px 0;
+            span {
+              display: block;
+              flex: 1 auto;
+              font-size: 14px;
+            }
+          }
+          p {
+            .ellipsis();
+            font-size: 14px;
+            color: @jd__font-red;
+          }
         }
       }
     }

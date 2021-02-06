@@ -2,28 +2,10 @@
   <div class="Mjd__container">
     <div class="tabbar">
       <ul class="tab">
-        <li class="tab__item">
-          <router-link to="/mjd">
-            <i class="iconfont">&#xe89f;</i>
-            <span>首页</span>
-          </router-link>
-        </li>
-        <li class="tab__item">
-          <router-link to="/mjd/shopping">
-            <i class="iconfont">&#xe663;</i>
-            <span>购物车</span>
-          </router-link>
-        </li>
-        <li class="tab__item">
-          <router-link to="/mjd/order">
-            <i class="iconfont">&#xe63b;</i>
-            <span>订单</span>
-          </router-link>
-        </li>
-        <li class="tab__item">
-          <router-link to="/mjd/my">
-            <i class="iconfont">&#xeb74;</i>
-            <span>我的</span>
+        <li class="tab__item" v-for="(tab_item, index) in TabBarList" :key="index">
+          <router-link :to="tab_item.link">
+            <i class="iconfont" v-html="tab_item.icon"></i>
+            <span>{{ tab_item.text }}</span>
           </router-link>
         </li>
       </ul>
@@ -36,7 +18,34 @@
 import {defineComponent} from 'vue'
 
 export default defineComponent({
-  name: "index"
+  name: "index",
+  setup() {
+    const TabBarList = [
+      {
+        link: '/mjd',
+        icon: '&#xe89f;',
+        text: '首页'
+      },
+      {
+        link: '/mjd/shopping',
+        icon: '&#xe663;',
+        text: '购物车'
+      },
+      {
+        link: '/mjd/order',
+        icon: '&#xe63b;',
+        text: '订单'
+      },
+      {
+        link: '/mjd/my',
+        icon: '&#xeb74;',
+        text: '我的'
+      }
+    ]
+    return {
+      TabBarList
+    }
+  },
 })
 </script>
 
