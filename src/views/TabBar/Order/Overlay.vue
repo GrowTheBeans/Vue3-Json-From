@@ -1,9 +1,10 @@
 <template>
-  <div class="overlay_containers">
-    <div class="overlay_warapper">
+  <div class="overlay__containers">
+    <div class="overlay__warapper">
       <div class="overlay-main">
         <h1>{{ Seller.name }}</h1>
       </div>
+      <span class="overlay-rate">新鲜</span>
     </div>
   </div>
 </template>
@@ -12,16 +13,20 @@
 export default {
   name: "Overlay",
   props: {
-    Seller: {},
+    Seller: {
+      type: Object
+    },
   },
-  data() {
-    return {};
+  data(props) {
+    // return {
+    // };
+    console.log(props)
   },
 };
 </script>
 
 <style scoped lang="less">
-.overlay_containers {
+.overlay__containers {
   position: fixed;
   top: 0;
   left: 0;
@@ -30,7 +35,7 @@ export default {
   background-color: rgba(7, 17, 27, 0.8);
   filter: blur(10);
 
-  .overlay_warapper {
+  .overlay__warapper {
     margin-top: 64px;
 
     .overlay-main {

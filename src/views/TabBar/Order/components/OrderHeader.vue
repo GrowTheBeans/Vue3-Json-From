@@ -32,7 +32,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-import Overlay from "./Overlay";
+import Overlay from "../Overlay";
 
 export default {
   name: "OrderHeader",

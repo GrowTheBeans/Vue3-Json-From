@@ -20,25 +20,12 @@
           <img
             :src="icon.img"
             alt=""/>
-          <span>{{icon.desc}}</span>
+          <span>{{ icon.desc }}</span>
         </li>
       </ul>
       <div class="nearby">
         <h3>附近店铺</h3>
-        <ul class="nearby__container">
-          <li v-for="(nearby, index) in nearbyList" :key="index">
-            <img
-              src="//img10.360buyimg.com/mobilecms/s372x372_jfs/t1/134155/17/8787/199125/5f4c6e07E6f9969fd/b9ad661cae84cb50.jpg"
-              alt="">
-            <div class="neardy__listing">
-              <h5>{{nearby.title}}</h5>
-              <div class="neardy__listing-tags">
-                <span v-for="(tags, key) in nearby.tags" :key="key">{{tags}}</span>
-              </div>
-              <p>{{nearby.desc}}</p>
-            </div>
-          </li>
-        </ul>
+        <nearby :nearbyList="nearbyList"/>
       </div>
     </div>
   </div>
@@ -46,9 +33,11 @@
 
 <script type="text/ecmascript-6">
 import {defineComponent} from "vue"
+import Nearby from "../components/nearby.vue";
 
 export default defineComponent({
   name: "Home",
+  components: {Nearby},
   setup() {
     const nearbyList = [
       {
@@ -217,6 +206,7 @@ export default defineComponent({
       font-weight: 600;
       color: @jd__color-gray;
       vertical-align: middle;
+
       &::before {
         content: '';
         vertical-align: top;
@@ -225,45 +215,6 @@ export default defineComponent({
         height: 16px;
         margin-right: 8px;
         background: @jd__font-red;
-      }
-    }
-
-    &__container {
-      margin-bottom: 70px;
-      li {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 20px 4px;
-        margin: 14px 0;
-        background: #fff;
-        border-radius: 4px;
-        box-shadow: 0 0 8px 0 #dadada;
-
-        img {
-          width: 56px;
-          height: 56px;
-        }
-        .neardy__listing {
-          margin-left: 16px;
-          h5 {
-            font-size: 16px;
-          }
-          .neardy__listing-tags {
-            display: flex;
-            margin: 8px 0;
-            span {
-              display: block;
-              flex: 1 auto;
-              font-size: 14px;
-            }
-          }
-          p {
-            .ellipsis();
-            font-size: 14px;
-            color: @jd__font-red;
-          }
-        }
       }
     }
   }
