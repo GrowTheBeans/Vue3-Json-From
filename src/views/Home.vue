@@ -98,23 +98,7 @@ const userData: UserProps = {
 }
 const colleageData: ColleageProps[] = [
   {
-    key: 111,
-    Affiliation: '教育部',
-    City: '北京',
-    Logo: require('../assets/login.svg'),
-    Name: '北京大学',
-    Type: '公办理工'
-  },
-  {
-    key: 222,
-    Affiliation: '公安部',
-    City: '上海',
-    Logo: require('../assets/login.svg'),
-    Name: '上海大学',
-    Type: '理工'
-  },
-  {
-    key: 333,
+    key: 666,
     Affiliation: '国防部',
     City: '浙江',
     Logo: require('../assets/login.svg'),
@@ -122,7 +106,7 @@ const colleageData: ColleageProps[] = [
     Type: '公办'
   },
   {
-    key: 444,
+    key: 666,
     Affiliation: '国防部',
     City: '浙江',
     Logo: require('../assets/login.svg'),
@@ -130,7 +114,23 @@ const colleageData: ColleageProps[] = [
     Type: '公办'
   },
   {
-    key: 555,
+    key: 666,
+    Affiliation: '国防部',
+    City: '浙江',
+    Logo: require('../assets/login.svg'),
+    Name: '浙江大学',
+    Type: '公办'
+  },
+  {
+    key: 666,
+    Affiliation: '国防部',
+    City: '浙江',
+    Logo: require('../assets/login.svg'),
+    Name: '浙江大学',
+    Type: '公办'
+  },
+  {
+    key: 666,
     Affiliation: '国防部',
     City: '浙江',
     Logo: require('../assets/login.svg'),
